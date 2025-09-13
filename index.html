@@ -53,18 +53,18 @@
 <body>
   <div class="wrap">
     <header>
-      <div class=\"brand\">
-        <img src=\"https://upload.wikimedia.org/wikipedia/en/thumb/4/44/Cal_Poly_SLO_logo.svg/512px-Cal_Poly_SLO_logo.svg.png\" alt=\"Cal Poly logo\" class=\"logo\" />
-        <a href=\"https://mirandayin.com\" target=\"_blank\" style=\"margin-left:auto;padding:8px 14px;border-radius:12px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:600\">🌐 Website</a>
-        <a href=\"https://scholar.google.com/citations?user=0zBOAPwAAAAJ&hl=en\" target=\"_blank\" style=\"margin-left:8px;padding:8px 14px;border-radius:12px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:600\">🎓 Google Scholar</a>
-        <a href=\"https://www.linkedin.com/in/miranda-yin-241a7665/\" target=\"_blank\" style=\"margin-left:8px;padding:8px 14px;border-radius:12px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:600\">🔗 LinkedIn</a>
+      <div class="brand">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/44/Cal_Poly_SLO_logo.svg/512px-Cal_Poly_SLO_logo.svg.png" alt="Cal Poly logo" class="logo" />
+        <a href="https://mirandayin.com" target="_blank" style="margin-left:auto;padding:8px 14px;border-radius:12px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:600">🌐 Website</a>
+        <a href="https://scholar.google.com/citations?user=0zBOAPwAAAAJ&hl=en" target="_blank" style="margin-left:8px;padding:8px 14px;border-radius:12px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:600">🎓 Google Scholar</a>
+        <a href="https://www.linkedin.com/in/miranda-yin-241a7665/" target="_blank" style="margin-left:8px;padding:8px 14px;border-radius:12px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:600">🔗 LinkedIn</a>
       </div>
       <div class="bio">
         <img src="headshot.jpg" alt="Miranda Yin headshot" />
-        <div class=\"bio-text\">
+        <div class="bio-text">
           <h1>Miranda Yin — Press &amp; Media</h1>
           <p>Assistant Professor of Marketing at Cal Poly, studying prosocial consumer behavior, empathy in AI, and branding.</p>
-          <p><a href=\"https://mirandayin.com\" target=\"_blank\" style=\"color:var(--accent);font-weight:600;text-decoration:none\">mirandayin.com</a></p>
+          <p><a href="https://mirandayin.com" target="_blank" style="color:var(--accent);font-weight:600;text-decoration:none">mirandayin.com</a></p>
         </div>
       </div>
       <div class="controls">
@@ -172,7 +172,8 @@
     const $ = (sel, el=document) => el.querySelector(sel);
     const fmtDate = (iso) => new Date(iso + 'T00:00:00');
     const data = JSON.parse(document.getElementById('media-data').textContent);
-    let items = data.items.map((d,i)=> ({ id:i, ...d, _date: fmtDate(d.date) }));
+    let items = data.items.map((d,i)=> ({ id:i, ...d, _date: new Date(d.date + 'T00:00:00') }));
+    const PLACEHOLDER_IMG = 'https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=60';
     const years = Array.from(new Set(items.map(i => i._date.getFullYear()))).sort((a,b)=>b-a);
     const yearChips = $('#yearChips');
     let activeYear = '';
@@ -184,7 +185,8 @@
     const grid=$('#grid');
     function card(i){
       const tags=(i.tags||[]).map(t=>`<span class="tag">${t}</span>`).join(' ');
-      const img=i.image? `<a class="thumb" href="${i.url}" target="_blank"><img alt="" src="${i.image}"/></a>` : `<a class="thumb" href="${i.url}" target="_blank"></a>`;
+      const imgSrc = i.image || PLACEHOLDER_IMG;
+      const img = `<a class="thumb" href="${i.url}" target="_blank"><img alt="" src="${imgSrc}"/></a>`;
       return `<article class="card">${img}<div class="content"><h3 class="title"><a href="${i.url}" target="_blank" style="color:inherit;text-decoration:none">${i.title}</a></h3><div class="meta"><span class="outlet">${i.outlet}</span>•<span class="date">${i.date}</span>•<span>${i.type||''}</span></div><div>${tags}</div></div><div class="actions"><a class="btn" href="${i.url}" target="_blank">Open</a></div></article>`;
     }
     function render(){
