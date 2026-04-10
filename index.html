@@ -3,45 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bingqing (Miranda) Yin, Ph.D. — Marketing Professor & Consumer Behavior Researcher</title>
-  <meta name="description" content="Bingqing (Miranda) Yin is an Assistant Professor of Marketing at Cal Poly, researching prosocial consumer behavior, charitable giving, and AI empathy." />
+  <title>Bingqing Miranda Yin, Ph.D. — Marketing Professor & Consumer Behavior Researcher</title>
+  <meta name="description" content="Bingqing Miranda Yin is an Assistant Professor of Marketing at Cal Poly, researching prosocial consumer behavior, charitable giving, and AI empathy." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
-    /* ─── Reset & Variables ─────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg:       #080c18;
-      --bg2:      #0d1120;
-      --surface:  rgba(255,255,255,0.04);
-      --surface2: rgba(255,255,255,0.07);
-      --border:   rgba(255,255,255,0.09);
-      --gold:     #c9a84c;
-      --gold2:    #e8c97a;
-      --text:     #e8eaf0;
-      --muted:    #7a80a0;
-      --accent:   #6c63ff;
-      --accent2:  #a78bfa;
-      --green:    #4ade80;
-      --radius:   16px;
+      --bg: #080c18; --bg2: #0d1120;
+      --surface: rgba(255,255,255,0.04); --surface2: rgba(255,255,255,0.07);
+      --border: rgba(255,255,255,0.09);
+      --gold: #c9a84c; --gold2: #e8c97a;
+      --text: #e8eaf0; --muted: #7a80a0;
+      --accent: #6c63ff; --accent2: #a78bfa;
+      --green: #4ade80; --radius: 16px;
     }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-      line-height: 1.7;
-    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; line-height: 1.7; }
     a { color: var(--gold); text-decoration: none; transition: color .2s; }
     a:hover { color: var(--gold2); }
     ::selection { background: rgba(201,168,76,.25); }
-
-    /* ─── Particles ──────────────────────────────────────────────── */
     #particles { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .7; }
-
-    /* ─── Nav ─────────────────────────────────────────────────────── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -50,22 +33,10 @@
       background: rgba(8,12,24,0.75);
       border-bottom: 1px solid var(--border);
     }
-    .nav-brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem; font-weight: 600;
-      background: linear-gradient(135deg, var(--gold), var(--gold2));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .nav-links { display: flex; gap: 1.8rem; list-style: none; }
-    .nav-links a {
-      font-size: .82rem; font-weight: 500; letter-spacing: .06em;
-      color: var(--muted); text-transform: uppercase;
-      position: relative; padding-bottom: 3px;
-    }
-    .nav-links a::after {
-      content: ''; position: absolute; bottom: 0; left: 0;
-      width: 0; height: 1px; background: var(--gold); transition: width .3s;
-    }
+    .nav-brand { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; background: linear-gradient(135deg, var(--gold), var(--gold2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .nav-links { display: flex; gap: 1.4rem; list-style: none; }
+    .nav-links a { font-size: .76rem; font-weight: 500; letter-spacing: .06em; color: var(--muted); text-transform: uppercase; position: relative; padding-bottom: 3px; }
+    .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--gold); transition: width .3s; }
     .nav-links a:hover { color: var(--text); }
     .nav-links a:hover::after { width: 100%; }
     .nav-menu-btn { display: none; background: none; border: 1px solid var(--border); color: var(--text); padding: .4rem .7rem; border-radius: 8px; cursor: pointer; font-size: 1rem; }
@@ -73,183 +44,74 @@
     .nav-mobile.open { display: flex; }
     .nav-mobile a { color: var(--muted); font-size: .9rem; }
     .nav-mobile a:hover { color: var(--gold2); }
-
-    /* ─── Hero ─────────────────────────────────────────────────────── */
-    #hero {
-      position: relative; z-index: 1;
-      min-height: 100vh; display: flex; align-items: center;
-      padding: 7rem 5vw 5rem;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(108,99,255,.14), transparent),
-        radial-gradient(ellipse 40% 40% at 85% 85%, rgba(201,168,76,.08), transparent);
-    }
+    #hero { position: relative; z-index: 1; min-height: 100vh; display: flex; align-items: center; padding: 7rem 5vw 5rem; background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(108,99,255,.14), transparent), radial-gradient(ellipse 40% 40% at 85% 85%, rgba(201,168,76,.08), transparent); }
     .hero-inner { max-width: 860px; margin: 0 auto; text-align: center; }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: .5rem;
-      font-size: .78rem; letter-spacing: .14em; text-transform: uppercase;
-      color: var(--gold); background: rgba(201,168,76,.1);
-      border: 1px solid rgba(201,168,76,.25);
-      padding: .35rem 1.1rem; border-radius: 50px; margin-bottom: 2rem;
-    }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); background: rgba(201,168,76,.1); border: 1px solid rgba(201,168,76,.25); padding: .35rem 1.1rem; border-radius: 50px; margin-bottom: 2rem; }
     .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.4)} }
-    .hero-photo {
-      width: 130px; height: 130px; border-radius: 50%; object-fit: cover; object-position: top;
-      border: 3px solid transparent;
-      background: linear-gradient(var(--bg), var(--bg)) padding-box,
-                  linear-gradient(135deg, var(--gold), var(--accent)) border-box;
-      box-shadow: 0 0 40px rgba(201,168,76,.2);
-      margin-bottom: 1.8rem;
-    }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.2rem, 5.5vw, 3.8rem);
-      line-height: 1.12; font-weight: 700; margin-bottom: .8rem;
-    }
-    .name-gradient {
-      background: linear-gradient(135deg, #fff 20%, var(--gold2) 80%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .hero-subtitle {
-      font-size: clamp(.95rem, 2vw, 1.2rem); color: var(--muted);
-      font-weight: 300; margin-bottom: 1.5rem; min-height: 1.8rem;
-    }
+    .hero-photo { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; object-position: top; border: 3px solid transparent; background: linear-gradient(var(--bg), var(--bg)) padding-box, linear-gradient(135deg, var(--gold), var(--accent)) border-box; box-shadow: 0 0 40px rgba(201,168,76,.2); margin-bottom: 1.8rem; }
+    h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5.5vw, 3.8rem); line-height: 1.12; font-weight: 700; margin-bottom: .8rem; }
+    .name-gradient { background: linear-gradient(135deg, #fff 20%, var(--gold2) 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-subtitle { font-size: clamp(.95rem, 2vw, 1.2rem); color: var(--muted); font-weight: 300; margin-bottom: 1.5rem; min-height: 1.8rem; }
     #typed { color: var(--gold2); font-weight: 500; }
-    .hero-bio {
-      max-width: 660px; margin: 0 auto 2.2rem;
-      font-size: 1rem; color: #a8adc4; line-height: 1.82;
-    }
+    .hero-bio { max-width: 660px; margin: 0 auto 2.2rem; font-size: 1rem; color: #a8adc4; line-height: 1.82; }
     .hero-cta { display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap; }
-    .btn {
-      padding: .72rem 1.7rem; border-radius: 50px; font-size: .88rem;
-      font-weight: 500; cursor: pointer; transition: all .25s;
-      display: inline-flex; align-items: center; gap: .45rem; border: none;
-    }
-    .btn-gold {
-      background: linear-gradient(135deg, var(--gold), #a87c28);
-      color: #0a0a0a; box-shadow: 0 4px 22px rgba(201,168,76,.3);
-    }
+    .btn { padding: .72rem 1.7rem; border-radius: 50px; font-size: .88rem; font-weight: 500; cursor: pointer; transition: all .25s; display: inline-flex; align-items: center; gap: .45rem; border: none; }
+    .btn-gold { background: linear-gradient(135deg, var(--gold), #a87c28); color: #0a0a0a; box-shadow: 0 4px 22px rgba(201,168,76,.3); }
     .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,168,76,.45); color: #0a0a0a; }
-    .btn-ghost {
-      background: var(--surface); color: var(--text); border: 1px solid var(--border);
-    }
+    .btn-ghost { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
     .btn-ghost:hover { background: var(--surface2); transform: translateY(-2px); border-color: rgba(255,255,255,.18); color: var(--text); }
-    .hero-stats {
-      display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap;
-      margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--border);
-    }
+    .hero-stats { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
     .stat { text-align: center; }
-    .stat-num {
-      font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700;
-      background: linear-gradient(135deg, var(--gold), var(--gold2));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, var(--gold), var(--gold2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .stat-label { font-size: .76rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-top: .2rem; }
-
-    /* ─── Section Scaffolding ─────────────────────────────────────── */
     section { position: relative; z-index: 1; padding: 5.5rem 5vw; }
     .inner { max-width: 1100px; margin: 0 auto; }
-    .stag {
-      display: inline-flex; align-items: center; gap: .5rem;
-      font-size: .72rem; letter-spacing: .16em; text-transform: uppercase;
-      color: var(--accent2); margin-bottom: .6rem;
-    }
+    .stag { display: inline-flex; align-items: center; gap: .5rem; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent2); margin-bottom: .6rem; }
     .stag::before { content: ''; width: 20px; height: 1px; background: var(--accent2); }
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.7rem, 3.5vw, 2.4rem); font-weight: 600; margin-bottom: .9rem;
-    }
+    h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 3.5vw, 2.4rem); font-weight: 600; margin-bottom: .9rem; }
     .sdiv { width: 56px; height: 3px; background: linear-gradient(90deg, var(--gold), transparent); border-radius: 2px; margin-bottom: 2.5rem; }
     .section-lead { color: var(--muted); max-width: 580px; margin-bottom: 2.2rem; font-size: .98rem; }
-
-    /* ─── About ───────────────────────────────────────────────────── */
     #about { background: radial-gradient(ellipse 55% 50% at 5% 50%, rgba(108,99,255,.07), transparent); }
     .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: center; }
     .about-photo-col { position: relative; }
-    .photo-frame {
-      border-radius: 24px; padding: 3px;
-      background: linear-gradient(135deg, var(--gold) 0%, var(--accent) 100%);
-      box-shadow: 0 24px 60px rgba(0,0,0,.55);
-    }
-    .photo-inner {
-      border-radius: 22px; overflow: hidden;
-      background: #141828; aspect-ratio: 3/4;
-      display: flex; align-items: center; justify-content: center; font-size: 5rem;
-    }
+    .photo-frame { border-radius: 24px; padding: 3px; background: linear-gradient(135deg, var(--gold) 0%, var(--accent) 100%); box-shadow: 0 24px 60px rgba(0,0,0,.55); }
+    .photo-inner { border-radius: 22px; overflow: hidden; background: #141828; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
     .photo-inner img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
-    .badges {
-      position: absolute; bottom: -.8rem; right: -1rem;
-      display: flex; flex-direction: column; gap: .5rem;
-    }
-    .badge {
-      background: rgba(10,14,28,0.92); backdrop-filter: blur(14px);
-      border: 1px solid var(--border); border-radius: 12px;
-      padding: .5rem .9rem; font-size: .76rem; font-weight: 500;
-      display: flex; align-items: center; gap: .4rem;
-      box-shadow: 0 4px 18px rgba(0,0,0,.5);
-    }
+    .badges { position: absolute; bottom: -.8rem; right: -1rem; display: flex; flex-direction: column; gap: .5rem; }
+    .badge { background: rgba(10,14,28,0.92); backdrop-filter: blur(14px); border: 1px solid var(--border); border-radius: 12px; padding: .5rem .9rem; font-size: .76rem; font-weight: 500; display: flex; align-items: center; gap: .4rem; box-shadow: 0 4px 18px rgba(0,0,0,.5); }
     .bdot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
     .about-text p { color: #aaafca; font-size: .99rem; margin-bottom: 1.1rem; line-height: 1.8; }
     .pills { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.6rem; }
-    .pill {
-      padding: .35rem .95rem; border-radius: 50px; font-size: .8rem; font-weight: 500;
-      border: 1px solid rgba(201,168,76,.3); color: var(--gold2); background: rgba(201,168,76,.06);
-    }
+    .pill { padding: .35rem .95rem; border-radius: 50px; font-size: .8rem; font-weight: 500; border: 1px solid rgba(201,168,76,.3); color: var(--gold2); background: rgba(201,168,76,.06); }
     .edu-list { margin-top: 1.8rem; display: flex; flex-direction: column; gap: .9rem; }
-    .edu-item {
-      display: flex; gap: .9rem; align-items: flex-start;
-      padding: .9rem 1.1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-    }
+    .edu-item { display: flex; gap: .9rem; align-items: flex-start; padding: .9rem 1.1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
     .edu-icon { font-size: 1.3rem; flex-shrink: 0; }
     .edu-deg { font-weight: 600; font-size: .92rem; }
     .edu-sch { color: var(--muted); font-size: .83rem; }
-
-    /* ─── Research ────────────────────────────────────────────────── */
     #research { background: radial-gradient(ellipse 50% 55% at 95% 50%, rgba(201,168,76,.05), transparent); }
     .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.3rem; }
-    .rcard {
-      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 1.7rem; transition: all .3s; position: relative; overflow: hidden; cursor: default;
-    }
-    .rcard::before {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(108,99,255,.07), rgba(201,168,76,.05));
-      opacity: 0; transition: opacity .3s;
-    }
+    .rcard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.7rem; transition: all .3s; position: relative; overflow: hidden; cursor: default; }
+    .rcard::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(108,99,255,.07), rgba(201,168,76,.05)); opacity: 0; transition: opacity .3s; }
     .rcard:hover { transform: translateY(-4px); border-color: rgba(201,168,76,.28); box-shadow: 0 14px 40px rgba(0,0,0,.4); }
     .rcard:hover::before { opacity: 1; }
     .rcard-icon { font-size: 1.9rem; margin-bottom: .9rem; }
     .rcard h3 { font-size: 1.03rem; font-weight: 600; margin-bottom: .6rem; }
     .rcard p { color: var(--muted); font-size: .88rem; line-height: 1.65; }
-
-    /* ─── Publications ────────────────────────────────────────────── */
     #publications { background: var(--bg2); }
     .pub-controls { display: flex; gap: .9rem; flex-wrap: wrap; align-items: center; margin-bottom: 1.8rem; }
-    .pub-search {
-      flex: 1; min-width: 200px; background: var(--surface); border: 1px solid var(--border);
-      border-radius: 50px; padding: .65rem 1.3rem; color: var(--text); font-size: .88rem;
-      outline: none; transition: border-color .2s;
-    }
+    .pub-search { flex: 1; min-width: 200px; background: var(--surface); border: 1px solid var(--border); border-radius: 50px; padding: .65rem 1.3rem; color: var(--text); font-size: .88rem; outline: none; transition: border-color .2s; }
     .pub-search:focus { border-color: var(--gold); }
     .pub-search::placeholder { color: var(--muted); }
     .filters { display: flex; gap: .45rem; flex-wrap: wrap; }
-    .filt {
-      padding: .4rem 1rem; border-radius: 50px; font-size: .78rem; font-weight: 500;
-      border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all .2s;
-    }
+    .filt { padding: .4rem 1rem; border-radius: 50px; font-size: .78rem; font-weight: 500; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all .2s; }
     .filt.active, .filt:hover { background: rgba(201,168,76,.1); border-color: rgba(201,168,76,.5); color: var(--gold2); }
     .pub-list { display: flex; flex-direction: column; gap: 1.1rem; }
-    .pub {
-      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 1.4rem 1.7rem; transition: all .25s; border-left: 3px solid transparent;
-    }
+    .pub { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem 1.7rem; transition: all .25s; border-left: 3px solid transparent; }
     .pub:hover { border-left-color: var(--gold); transform: translateX(3px); }
     .pub.hidden { display: none; }
     .pub-meta { display: flex; gap: .7rem; flex-wrap: wrap; align-items: center; margin-bottom: .55rem; }
-    .pub-year {
-      font-size: .73rem; font-weight: 700; letter-spacing: .08em; color: var(--gold);
-      background: rgba(201,168,76,.1); padding: .18rem .6rem; border-radius: 50px;
-    }
+    .pub-year { font-size: .73rem; font-weight: 700; letter-spacing: .08em; color: var(--gold); background: rgba(201,168,76,.1); padding: .18rem .6rem; border-radius: 50px; }
     .pub-jnl { font-size: .8rem; color: var(--accent2); font-style: italic; }
     .pub-tag { font-size: .7rem; padding: .15rem .5rem; border-radius: 50px; background: rgba(108,99,255,.1); color: var(--accent2); border: 1px solid rgba(108,99,255,.18); }
     .pub-title { font-size: .97rem; font-weight: 500; margin-bottom: .4rem; line-height: 1.5; }
@@ -258,84 +120,60 @@
     .pub-links { display: flex; gap: .9rem; margin-top: .8rem; flex-wrap: wrap; }
     .plink { display: inline-flex; align-items: center; gap: .3rem; font-size: .78rem; color: var(--gold); }
     .plink:hover { gap: .5rem; }
-
-    /* ─── AI Assistant ────────────────────────────────────────────── */
+    #conferences { background: radial-gradient(ellipse 50% 55% at 5% 50%, rgba(108,99,255,.07), transparent); }
+    .conf-list { display: flex; flex-direction: column; gap: .9rem; }
+    .conf-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.6rem; transition: all .25s; border-left: 3px solid transparent; }
+    .conf-item:hover { border-left-color: var(--accent2); transform: translateX(3px); }
+    .conf-meta { display: flex; gap: .7rem; flex-wrap: wrap; align-items: center; margin-bottom: .45rem; }
+    .conf-year { font-size: .73rem; font-weight: 700; letter-spacing: .08em; color: var(--accent2); background: rgba(108,99,255,.1); padding: .18rem .6rem; border-radius: 50px; }
+    .conf-venue { font-size: .8rem; color: var(--muted); font-style: italic; }
+    .conf-type-tag { font-size: .7rem; padding: .15rem .5rem; border-radius: 50px; background: rgba(201,168,76,.08); color: var(--gold); border: 1px solid rgba(201,168,76,.2); }
+    .conf-title { font-size: .95rem; font-weight: 500; margin-bottom: .3rem; line-height: 1.5; }
+    .conf-authors { font-size: .82rem; color: var(--muted); }
+    .conf-authors strong { color: var(--gold2); }
+    .conf-loc { font-size: .78rem; color: var(--muted); margin-top: .3rem; }
+    #honors { background: var(--bg2); }
+    .honors-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.1rem; }
+    .honor-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.4rem; transition: all .25s; }
+    .honor-card:hover { transform: translateY(-3px); border-color: rgba(201,168,76,.28); box-shadow: 0 8px 28px rgba(0,0,0,.3); }
+    .honor-header { display: flex; align-items: flex-start; gap: .75rem; margin-bottom: .4rem; }
+    .honor-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .honor-name { font-size: .9rem; font-weight: 600; color: var(--text); line-height: 1.4; }
+    .honor-org { font-size: .8rem; color: var(--muted); margin-top: .2rem; }
+    .honor-year { font-size: .72rem; font-weight: 700; color: var(--gold); background: rgba(201,168,76,.1); padding: .15rem .55rem; border-radius: 50px; display: inline-block; margin-top: .5rem; }
     #ai-assistant { background: radial-gradient(ellipse 65% 70% at 50% 50%, rgba(108,99,255,.09), transparent); }
-    .ai-card {
-      background: linear-gradient(135deg, rgba(108,99,255,.09), rgba(201,168,76,.05));
-      border: 1px solid rgba(108,99,255,.22); border-radius: 24px; padding: 2.2rem;
-      max-width: 780px; margin: 0 auto;
-    }
+    .ai-card { background: linear-gradient(135deg, rgba(108,99,255,.09), rgba(201,168,76,.05)); border: 1px solid rgba(108,99,255,.22); border-radius: 24px; padding: 2.2rem; max-width: 780px; margin: 0 auto; }
     .ai-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.4rem; }
-    .ai-avatar {
-      width: 46px; height: 46px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--gold));
-      display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
-      flex-shrink: 0; box-shadow: 0 4px 16px rgba(108,99,255,.4);
-    }
+    .ai-avatar { width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--gold)); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; box-shadow: 0 4px 16px rgba(108,99,255,.4); }
     .ai-title { font-size: 1rem; font-weight: 600; }
     .ai-sub { font-size: .8rem; color: var(--muted); }
     .ai-online { margin-left: auto; display: flex; align-items: center; gap: .35rem; font-size: .76rem; color: var(--green); }
     .ai-online::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
-    .chat-win {
-      background: rgba(8,12,24,.75); border: 1px solid var(--border); border-radius: 14px;
-      padding: 1.1rem; min-height: 150px; margin-bottom: .9rem;
-      display: flex; flex-direction: column; gap: .75rem; max-height: 340px; overflow-y: auto;
-    }
-    .msg {
-      max-width: 88%; padding: .75rem 1rem; border-radius: 12px;
-      font-size: .88rem; line-height: 1.58; animation: fadeUp .3s ease;
-    }
+    .chat-win { background: rgba(8,12,24,.75); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem; min-height: 150px; margin-bottom: .9rem; display: flex; flex-direction: column; gap: .75rem; max-height: 340px; overflow-y: auto; }
+    .msg { max-width: 88%; padding: .75rem 1rem; border-radius: 12px; font-size: .88rem; line-height: 1.58; animation: fadeUp .3s ease; }
     @keyframes fadeUp { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
     .msg.bot { background: rgba(108,99,255,.12); border: 1px solid rgba(108,99,255,.14); align-self: flex-start; border-bottom-left-radius: 3px; }
     .msg.user { background: rgba(201,168,76,.1); border: 1px solid rgba(201,168,76,.2); align-self: flex-end; border-bottom-right-radius: 3px; }
     .ai-row { display: flex; gap: .65rem; }
-    .ai-inp {
-      flex: 1; background: var(--surface); border: 1px solid var(--border);
-      border-radius: 50px; padding: .65rem 1.3rem; color: var(--text); font-size: .88rem;
-      outline: none; transition: border-color .2s;
-    }
+    .ai-inp { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 50px; padding: .65rem 1.3rem; color: var(--text); font-size: .88rem; outline: none; transition: border-color .2s; }
     .ai-inp:focus { border-color: var(--accent); }
     .ai-inp::placeholder { color: var(--muted); }
-    .ai-btn {
-      width: 42px; height: 42px; border-radius: 50%; border: none; cursor: pointer;
-      background: linear-gradient(135deg, var(--accent), #8b5cf6); color: #fff; font-size: 1rem;
-      display: flex; align-items: center; justify-content: center; transition: all .2s;
-      box-shadow: 0 4px 14px rgba(108,99,255,.35); flex-shrink: 0;
-    }
+    .ai-btn { width: 42px; height: 42px; border-radius: 50%; border: none; cursor: pointer; background: linear-gradient(135deg, var(--accent), #8b5cf6); color: #fff; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: all .2s; box-shadow: 0 4px 14px rgba(108,99,255,.35); flex-shrink: 0; }
     .ai-btn:hover { transform: scale(1.1); box-shadow: 0 6px 22px rgba(108,99,255,.5); }
     .ai-suggs { display: flex; gap: .45rem; flex-wrap: wrap; margin-top: .8rem; }
-    .sugg {
-      font-size: .76rem; padding: .32rem .8rem; border-radius: 50px; cursor: pointer;
-      border: 1px solid var(--border); color: var(--muted); background: var(--surface); transition: all .2s;
-    }
+    .sugg { font-size: .76rem; padding: .32rem .8rem; border-radius: 50px; cursor: pointer; border: 1px solid var(--border); color: var(--muted); background: var(--surface); transition: all .2s; }
     .sugg:hover { border-color: var(--accent); color: var(--accent2); background: rgba(108,99,255,.08); }
-
-    /* ─── Press / Media ───────────────────────────────────────────── */
     #media { background: radial-gradient(ellipse 40% 50% at 0% 100%, rgba(201,168,76,.05), transparent); }
     .press-controls { display: flex; gap: .9rem; flex-wrap: wrap; align-items: center; margin-bottom: 1.2rem; }
-    .press-search {
-      flex: 1; min-width: 200px; background: var(--surface); border: 1px solid var(--border);
-      border-radius: 50px; padding: .65rem 1.3rem; color: var(--text); font-size: .88rem;
-      outline: none; transition: border-color .2s;
-    }
+    .press-search { flex: 1; min-width: 200px; background: var(--surface); border: 1px solid var(--border); border-radius: 50px; padding: .65rem 1.3rem; color: var(--text); font-size: .88rem; outline: none; transition: border-color .2s; }
     .press-search:focus { border-color: var(--gold); }
     .press-search::placeholder { color: var(--muted); }
-    .press-select {
-      background: var(--surface); border: 1px solid var(--border); color: var(--text);
-      padding: .65rem 1rem; border-radius: 12px; font-size: .85rem; outline: none; cursor: pointer;
-    }
+    .press-select { background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: .65rem 1rem; border-radius: 12px; font-size: .85rem; outline: none; cursor: pointer; }
     .year-chips { display: flex; gap: .45rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
-    .ychip {
-      padding: .32rem .8rem; border-radius: 50px; font-size: .76rem; font-weight: 500;
-      border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all .2s;
-    }
+    .ychip { padding: .32rem .8rem; border-radius: 50px; font-size: .76rem; font-weight: 500; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all .2s; }
     .ychip.active { background: rgba(201,168,76,.1); border-color: rgba(201,168,76,.5); color: var(--gold2); }
     .press-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.2rem; }
-    .pcard {
-      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-      overflow: hidden; display: flex; flex-direction: column; transition: all .28s;
-    }
+    .pcard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: all .28s; }
     .pcard:hover { transform: translateY(-4px); border-color: rgba(201,168,76,.28); box-shadow: 0 12px 36px rgba(0,0,0,.4); }
     .pcard-img { aspect-ratio: 16/9; overflow: hidden; background: #141828; }
     .pcard-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
@@ -349,49 +187,24 @@
     .pcard-link { margin-top: auto; display: inline-flex; align-items: center; gap: .3rem; font-size: .78rem; color: var(--gold); padding-top: .7rem; }
     .pcard-link:hover { gap: .5rem; }
     .pcard.hidden { display: none; }
-
-    /* ─── Teaching ────────────────────────────────────────────────── */
     #teaching { background: var(--bg); }
     .crs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.1rem; }
-    .crs {
-      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 1.5rem 1.7rem; transition: all .25s;
-    }
+    .crs { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem 1.7rem; transition: all .25s; }
     .crs:hover { transform: translateY(-3px); border-color: rgba(108,99,255,.28); box-shadow: 0 8px 28px rgba(0,0,0,.3); }
     .crs-num { font-size: .73rem; font-weight: 700; letter-spacing: .12em; color: var(--accent2); text-transform: uppercase; margin-bottom: .4rem; }
     .crs h3 { font-size: 1rem; font-weight: 600; margin-bottom: .55rem; }
     .crs p { font-size: .86rem; color: var(--muted); line-height: 1.6; }
     .crs-level { display: inline-block; margin-top: .75rem; font-size: .73rem; padding: .18rem .65rem; border-radius: 50px; background: rgba(108,99,255,.09); border: 1px solid rgba(108,99,255,.2); color: var(--accent2); }
-
-    /* ─── Contact ─────────────────────────────────────────────────── */
-    #contact {
-      background: radial-gradient(ellipse 65% 60% at 50% 100%, rgba(108,99,255,.1), transparent);
-      text-align: center;
-    }
+    #contact { background: radial-gradient(ellipse 65% 60% at 50% 100%, rgba(108,99,255,.1), transparent); text-align: center; }
     .contact-wrap { max-width: 660px; margin: 0 auto; }
     .contact-wrap p { color: var(--muted); margin-bottom: 2rem; font-size: .98rem; }
     .clinks { display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap; }
-    .clink {
-      display: flex; align-items: center; gap: .5rem;
-      padding: .7rem 1.4rem; border-radius: 50px;
-      border: 1px solid var(--border); color: var(--text);
-      font-size: .88rem; transition: all .25s; background: var(--surface);
-    }
+    .clink { display: flex; align-items: center; gap: .5rem; padding: .7rem 1.4rem; border-radius: 50px; border: 1px solid var(--border); color: var(--text); font-size: .88rem; transition: all .25s; background: var(--surface); }
     .clink:hover { border-color: var(--gold); color: var(--gold2); transform: translateY(-2px); background: rgba(201,168,76,.06); }
-
-    /* ─── Footer ──────────────────────────────────────────────────── */
-    footer {
-      text-align: center; padding: 1.8rem 5vw;
-      border-top: 1px solid var(--border); color: var(--muted); font-size: .8rem;
-      position: relative; z-index: 1;
-    }
+    footer { text-align: center; padding: 1.8rem 5vw; border-top: 1px solid var(--border); color: var(--muted); font-size: .8rem; position: relative; z-index: 1; }
     footer strong { color: var(--gold); }
-
-    /* ─── Reveal ──────────────────────────────────────────────────── */
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
     .reveal.vis { opacity: 1; transform: translateY(0); }
-
-    /* ─── Responsive ──────────────────────────────────────────────── */
     @media (max-width: 820px) {
       nav { padding: .9rem 1.5rem; }
       .nav-links { display: none; }
@@ -404,16 +217,15 @@
   </style>
 </head>
 <body>
-
 <canvas id="particles"></canvas>
-
-<!-- Nav -->
 <nav>
   <div class="nav-brand">Bingqing (Miranda) Yin</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#research">Research</a></li>
     <li><a href="#publications">Publications</a></li>
+    <li><a href="#conferences">Conferences</a></li>
+    <li><a href="#honors">Honors</a></li>
     <li><a href="#ai-assistant">AI Assistant</a></li>
     <li><a href="#media">Press</a></li>
     <li><a href="#teaching">Teaching</a></li>
@@ -424,6 +236,8 @@
     <a href="#about" onclick="this.closest('.nav-mobile').classList.remove('open')">About</a>
     <a href="#research" onclick="this.closest('.nav-mobile').classList.remove('open')">Research</a>
     <a href="#publications" onclick="this.closest('.nav-mobile').classList.remove('open')">Publications</a>
+    <a href="#conferences" onclick="this.closest('.nav-mobile').classList.remove('open')">Conferences</a>
+    <a href="#honors" onclick="this.closest('.nav-mobile').classList.remove('open')">Honors</a>
     <a href="#ai-assistant" onclick="this.closest('.nav-mobile').classList.remove('open')">AI Assistant</a>
     <a href="#media" onclick="this.closest('.nav-mobile').classList.remove('open')">Press</a>
     <a href="#teaching" onclick="this.closest('.nav-mobile').classList.remove('open')">Teaching</a>
@@ -431,38 +245,32 @@
   </div>
 </nav>
 
-<!-- Hero -->
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow"><span class="pulse"></span> Assistant Professor · Cal Poly Orfalea College of Business</div>
     <img src="headshot.jpg" alt="Bingqing (Miranda) Yin" class="hero-photo" onerror="this.style.display='none'" />
     <h1><span class="name-gradient">Bingqing (Miranda) Yin</span><br/><span style="font-family:'Playfair Display',serif;font-size:.55em;font-style:italic;color:var(--muted);font-weight:400">Ph.D.</span></h1>
     <p class="hero-subtitle">Researching <span id="typed"></span></p>
-    <p class="hero-bio">I study what motivates people to help others — and how organizations can design smarter strategies to encourage charitable giving, prosocial behavior, and meaningful social impact. My work bridges academic theory with real-world field experiments.</p>
+    <p class="hero-bio">I study what motivates people to help others — and how organizations can design smarter strategies (including AI tools) to encourage charitable giving, prosocial behavior, and meaningful social impact. My work bridges academic theory with real-world field experiments.</p>
     <div class="hero-cta">
       <a href="#research" class="btn btn-gold">⚡ Explore Research</a>
       <a href="#publications" class="btn btn-ghost">📄 Publications</a>
       <a href="#ai-assistant" class="btn btn-ghost">🤖 AI Assistant</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">4+</div><div class="stat-label">Publications</div></div>
-      <div class="stat"><div class="stat-num">4</div><div class="stat-label">Top Journals</div></div>
+      <div class="stat"><div class="stat-num">9+</div><div class="stat-label">Publications</div></div>
+      <div class="stat"><div class="stat-num">7</div><div class="stat-label">Top Journals</div></div>
+      <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Conference Papers</div></div>
       <div class="stat"><div class="stat-num">13+</div><div class="stat-label">Press Features</div></div>
-      <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Field Partners</div></div>
     </div>
   </div>
 </section>
 
-<!-- About -->
 <section id="about">
   <div class="inner">
     <div class="about-grid">
       <div class="about-photo-col reveal">
-        <div class="photo-frame">
-          <div class="photo-inner">
-            <img src="headshot.jpg" alt="Miranda Yin" onerror="this.outerHTML='🎓'" />
-          </div>
-        </div>
+        <div class="photo-frame"><div class="photo-inner"><img src="headshot.jpg" alt="Miranda Yin" onerror="this.outerHTML='🎓'" /></div></div>
         <div class="badges">
           <div class="badge"><span class="bdot" style="background:var(--green)"></span> Cal Poly OCOB</div>
           <div class="badge"><span class="bdot" style="background:var(--gold)"></span> Ph.D. · Univ. of Kansas</div>
@@ -476,35 +284,21 @@
         <p>My research explores the psychology behind charitable giving, prosocial incentives, gift-giving, and how emerging technologies like AI can foster empathy and helping behavior. I am passionate about developing evidence-based strategies that nonprofits and social enterprises can actually use.</p>
         <p>I partner with organizations including the <strong style="color:var(--text)">Salvation Army</strong>, <strong style="color:var(--text)">Headquarters Counseling Center</strong>, the <strong style="color:var(--text)">Learning Center</strong>, and the <strong style="color:var(--text)">SLO Food Bank</strong> to run field experiments and generate real-world impact.</p>
         <div class="pills">
-          <span class="pill">Prosocial Behavior</span>
-          <span class="pill">Charitable Giving</span>
-          <span class="pill">Relationship Norms</span>
-          <span class="pill">Incentive Design</span>
-          <span class="pill">Gift Psychology</span>
-          <span class="pill">AI &amp; Empathy</span>
-          <span class="pill">Field Experiments</span>
+          <span class="pill">Prosocial Behavior</span><span class="pill">Charitable Giving</span><span class="pill">Relationship Norms</span>
+          <span class="pill">Incentive Design</span><span class="pill">Gift Psychology</span><span class="pill">AI &amp; Empathy</span><span class="pill">Field Experiments</span>
         </div>
         <div class="edu-list">
-          <div class="edu-item">
-            <div class="edu-icon">🎓</div>
-            <div><div class="edu-deg">Ph.D. in Marketing</div><div class="edu-sch">University of Kansas</div></div>
-          </div>
-          <div class="edu-item">
-            <div class="edu-icon">🏛️</div>
-            <div><div class="edu-deg">Assistant Professor of Marketing</div><div class="edu-sch">Orfalea College of Business · Cal Poly SLO</div></div>
-          </div>
+          <div class="edu-item"><div class="edu-icon">🎓</div><div><div class="edu-deg">Ph.D. in Marketing</div><div class="edu-sch">University of Kansas</div></div></div>
+          <div class="edu-item"><div class="edu-icon">🏛️</div><div><div class="edu-deg">Assistant Professor of Marketing</div><div class="edu-sch">Orfalea College of Business · Cal Poly SLO</div></div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Research -->
 <section id="research">
   <div class="inner">
-    <div class="stag reveal">Research Interests</div>
-    <h2 class="reveal">What I Study</h2>
-    <div class="sdiv reveal"></div>
+    <div class="stag reveal">Research Interests</div><h2 class="reveal">What I Study</h2><div class="sdiv reveal"></div>
     <div class="grid3">
       <div class="rcard reveal"><div class="rcard-icon">🤝</div><h3>Prosocial Consumer Behavior</h3><p>Investigating the psychological and social drivers of charitable giving, volunteering, and helping — and how organizations can amplify these behaviors through better marketing design.</p></div>
       <div class="rcard reveal"><div class="rcard-icon">💛</div><h3>Relationship Norms &amp; Charity</h3><p>Exploring how pregiving incentives signal communal vs. exchange norms — shaping how donors perceive charities and whether they give. Even the physical form of an incentive matters.</p></div>
@@ -516,12 +310,9 @@
   </div>
 </section>
 
-<!-- Publications -->
 <section id="publications">
   <div class="inner">
-    <div class="stag reveal">Scholarship</div>
-    <h2 class="reveal">Publications</h2>
-    <div class="sdiv reveal"></div>
+    <div class="stag reveal">Scholarship</div><h2 class="reveal">Publications</h2><div class="sdiv reveal"></div>
     <div class="pub-controls reveal">
       <input class="pub-search" id="pubQ" type="text" placeholder="🔍  Search publications…" oninput="filtPubs()" />
       <div class="filters">
@@ -530,74 +321,142 @@
         <button class="filt" onclick="setTag('charity',this)">Charity</button>
         <button class="filt" onclick="setTag('gifts',this)">Gift-Giving</button>
         <button class="filt" onclick="setTag('ai',this)">AI</button>
+        <button class="filt" onclick="setTag('ethics',this)">Ethics</button>
+        <button class="filt" onclick="setTag('branding',this)">Branding</button>
       </div>
     </div>
     <div class="pub-list" id="pubList">
 
       <div class="pub reveal" data-tags="ai prosocial">
-        <div class="pub-meta">
-          <span class="pub-year">2025</span>
-          <span class="pub-jnl">Journal of Service Research</span>
-          <span class="pub-tag">AI</span><span class="pub-tag">Prosocial</span>
-        </div>
+        <div class="pub-meta"><span class="pub-year">2025</span><span class="pub-jnl">Journal of Service Research</span><span class="pub-tag">AI</span><span class="pub-tag">Prosocial</span><span class="pub-tag" style="background:rgba(201,168,76,.08);color:var(--gold);border-color:rgba(201,168,76,.2)">ABDC A*</span></div>
         <div class="pub-title">Empathetic AI Encounters: Pathways to Prosocial Behavior</div>
         <div class="pub-authors">Haijiao Shi, <strong>Bingqing (Miranda) Yin</strong>, Lefa Teng, Baolong Ma</div>
-        <div class="pub-links"><a class="plink" href="https://journals.sagepub.com/doi/abs/10.1177/10946705251380568" target="_blank">View Paper →</a></div>
+        <div class="pub-links"><a class="plink" href="https://doi.org/10.1177/10946705251380568" target="_blank" rel="noopener">View Paper →</a></div>
+      </div>
+
+      <div class="pub reveal" data-tags="ethics">
+        <div class="pub-meta"><span class="pub-year">2025</span><span class="pub-jnl">Journal of Business Ethics</span><span class="pub-tag">Ethics</span><span class="pub-tag">Well-being</span><span class="pub-tag" style="background:rgba(201,168,76,.08);color:var(--gold);border-color:rgba(201,168,76,.2)">FT50 · ABDC A*</span></div>
+        <div class="pub-title">Rage Against the Dying of The Light: Employees' Moral Outrage, Anger Expression, and Generalized Well-Being</div>
+        <div class="pub-authors">Robert Giacalone, Sean Valentine, <strong>Bingqing (Miranda) Yin</strong>, Mark Promislo</div>
+        <div class="pub-links"><a class="plink" href="https://scholar.google.com/scholar?q=Rage+Against+Dying+Light+Giacalone+Valentine+Yin+Business+Ethics" target="_blank" rel="noopener">Google Scholar →</a></div>
+      </div>
+
+      <div class="pub reveal" data-tags="ethics">
+        <div class="pub-meta"><span class="pub-year">2025</span><span class="pub-jnl">Stress and Health</span><span class="pub-tag">Ethics</span><span class="pub-tag">Stress</span><span class="pub-tag" style="background:rgba(201,168,76,.08);color:var(--gold);border-color:rgba(201,168,76,.2)">ABDC A</span></div>
+        <div class="pub-title">Unethical Poly-Victimization and its Impact on Work Stress and Individual Well-Being</div>
+        <div class="pub-authors">Sean Valentine, Robert Giacalone, <strong>Bingqing (Miranda) Yin</strong>, Mark Promislo</div>
+        <div class="pub-links"><a class="plink" href="https://doi.org/10.1002/smi.70014" target="_blank" rel="noopener">View Paper →</a></div>
       </div>
 
       <div class="pub reveal" data-tags="gifts">
-        <div class="pub-meta">
-          <span class="pub-year">2024</span>
-          <span class="pub-jnl">Journal of Retailing</span>
-          <span class="pub-tag">Gift-Giving</span><span class="pub-tag">Sustainability</span>
-        </div>
+        <div class="pub-meta"><span class="pub-year">2024</span><span class="pub-jnl">Journal of Retailing</span><span class="pub-tag">Gift-Giving</span><span class="pub-tag">Sustainability</span><span class="pub-tag" style="background:rgba(201,168,76,.08);color:var(--gold);border-color:rgba(201,168,76,.2)">ABDC A*</span></div>
         <div class="pub-title">Thoughtful or Thoughtless? Asymmetric Attitudes of Gift-Givers and Gift-Recipients toward Overpackaged Gifts</div>
-        <div class="pub-authors"><strong>Bingqing (Miranda) Yin</strong> et al.</div>
-        <div class="pub-links"><a class="plink" href="https://ideas.repec.org/a/eee/jouret/v100y2024i4p656-672.html" target="_blank">View Paper →</a></div>
+        <div class="pub-authors">Haijiao Shi, Rong Chen, <strong>Bingqing (Miranda) Yin</strong> <em style="font-size:.78rem;color:var(--muted)">(equal second authorship)</em></div>
+        <div class="pub-links"><a class="plink" href="https://www.sciencedirect.com/science/article/abs/pii/S0022435924000551" target="_blank" rel="noopener">View Paper →</a></div>
       </div>
 
       <div class="pub reveal" data-tags="charity prosocial">
-        <div class="pub-meta">
-          <span class="pub-year">2023</span>
-          <span class="pub-jnl">International Journal of Research in Marketing</span>
-          <span class="pub-tag">Charity</span><span class="pub-tag">In-Group Bias</span>
-        </div>
+        <div class="pub-meta"><span class="pub-year">2023</span><span class="pub-jnl">Journal of Advertising</span><span class="pub-tag">Charity</span><span class="pub-tag">In-Group Bias</span><span class="pub-tag" style="background:rgba(201,168,76,.08);color:var(--gold);border-color:rgba(201,168,76,.2)">ABDC A</span></div>
         <div class="pub-title">Benefactor- versus Recipient-Focused Charitable Appeals: How to Leverage In-Group Bias to Promote Donations for Out-Group Recipients</div>
-        <div class="pub-authors"><strong>Bingqing (Miranda) Yin</strong> et al.</div>
+        <div class="pub-authors"><strong>Bingqing (Miranda) Yin</strong>, Yexin Li</div>
+        <div class="pub-links"><a class="plink" href="https://www.tandfonline.com/doi/abs/10.1080/00913367.2023.2203697" target="_blank" rel="noopener">View Paper →</a></div>
       </div>
 
       <div class="pub reveal" data-tags="charity prosocial">
-        <div class="pub-meta">
-          <span class="pub-year">2020</span>
-          <span class="pub-jnl">Journal of Marketing</span>
-          <span class="pub-tag">Charity</span><span class="pub-tag">Incentives</span><span class="pub-tag">Relationship Norms</span>
-        </div>
-        <div class="pub-title">Coins Are Cold and Cards Are Caring: The Effect of Pregiving Incentives on Charity Perceptions, Relationship Norms, and Donation Behavior</div>
+        <div class="pub-meta"><span class="pub-year">2020</span><span class="pub-jnl">Journal of Marketing</span><span class="pub-tag">Charity</span><span class="pub-tag">Incentives</span><span class="pub-tag">Relationship Norms</span><span class="pub-tag" style="background:rgba(201,168,76,.08);color:var(--gold);border-color:rgba(201,168,76,.2)">FT50 · ABDC A*</span></div>
+        <div class="pub-title">Coins Are Cold and Cards Are Caring: The Effect of Pre-giving Incentives on Perceptions of Charitable Organizations and Donation Behavior</div>
         <div class="pub-authors"><strong>Bingqing (Miranda) Yin</strong>, Yexin Jessica Li, Surendra Singh</div>
-        <div class="pub-links">
-          <a class="plink" href="https://journals.sagepub.com/doi/abs/10.1177/0022242920931451" target="_blank">View Paper →</a>
-          <a class="plink" href="https://scholar.google.com/citations?user=0zBOAPwAAAAJ" target="_blank">Google Scholar →</a>
-        </div>
+        <div class="pub-links"><a class="plink" href="https://doi.org/10.1177/0022242920931451" target="_blank" rel="noopener">View Paper →</a><a class="plink" href="https://scholar.google.com/citations?user=0zBOAPwAAAAJ" target="_blank" rel="noopener">Google Scholar →</a></div>
+      </div>
+
+      <div class="pub reveal" data-tags="charity prosocial">
+        <div class="pub-meta"><span class="pub-year">2020</span><span class="pub-jnl">International Journal of Research in Marketing</span><span class="pub-tag">Charity</span><span class="pub-tag">Color Psychology</span><span class="pub-tag" style="background:rgba(201,168,76,.08);color:var(--gold);border-color:rgba(201,168,76,.2)">ABDC A*</span></div>
+        <div class="pub-title">Opposites Attract: Impact of Background Color on Effectiveness of Emotional Charity Appeals</div>
+        <div class="pub-authors">Jungsil Choi, Yexin J. Li, Priyamvadha Rangan, <strong>Bingqing (Miranda) Yin</strong>, Surendra N. Singh</div>
+        <div class="pub-links"><a class="plink" href="https://doi.org/10.1016/j.ijresmar.2020.02.004" target="_blank" rel="noopener">View Paper →</a></div>
+      </div>
+
+      <div class="pub reveal" data-tags="branding">
+        <div class="pub-meta"><span class="pub-year">2017</span><span class="pub-jnl">Journal of Product and Brand Management</span><span class="pub-tag">Branding</span><span class="pub-tag" style="background:rgba(201,168,76,.08);color:var(--gold);border-color:rgba(201,168,76,.2)">ABDC A</span></div>
+        <div class="pub-title">Impact of Diversity, Quality and Number of Brand Alliance Partners on the Perceived Quality of a New Brand</div>
+        <div class="pub-authors">Sanjay Mishra, Surendra Singh, Fang Xiang, <strong>Bingqing (Miranda) Yin</strong></div>
+        <div class="pub-links"><a class="plink" href="https://doi.org/10.1108/JPBM-09-2015-0969" target="_blank" rel="noopener">View Paper →</a></div>
+      </div>
+
+      <div class="pub reveal" data-tags="branding">
+        <div class="pub-meta"><span class="pub-year">2012</span><span class="pub-jnl">Review of Business &amp; Finance Case Studies</span><span class="pub-tag">Branding</span><span class="pub-tag">Beauty</span></div>
+        <div class="pub-title">Beauty in the Age of Marketing</div>
+        <div class="pub-authors"><strong>Bingqing (Miranda) Yin</strong>, Susie Pryor</div>
+        <div class="pub-links"><a class="plink" href="https://scholar.google.com/scholar?q=Beauty+Age+Marketing+Yin+Pryor+2012" target="_blank" rel="noopener">View Paper →</a></div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- AI Assistant -->
+<section id="conferences">
+  <div class="inner">
+    <div class="stag reveal">Conference Activity</div><h2 class="reveal">Conference Presentations</h2><div class="sdiv reveal"></div>
+    <p class="section-lead reveal">Selected competitive paper sessions, invited presentations, and working papers at leading marketing and consumer behavior conferences.</p>
+    <div class="conf-list">
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2025</span><span class="conf-type-tag">Competitive Paper</span><span class="conf-venue">Association for Consumer Research (ACR)</span></div><div class="conf-title">Empathetic AI in Action: Enhancing Prosocial Behavior through Human-AI Interaction</div><div class="conf-authors">Haijiao Shi &amp; <strong>Bingqing (Miranda) Yin</strong></div><div class="conf-loc">📍 Washington, DC</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2024</span><span class="conf-type-tag">Special Session</span><span class="conf-venue">Academy of Marketing Science (AMS)</span></div><div class="conf-title">Brands and Logos: Cultivating Compliance — The Influence of Anthropomorphic Branding on Consumer Responses to Brand Sustainability</div><div class="conf-authors">Ying Ying Li &amp; <strong>Bingqing (Miranda) Yin</strong></div><div class="conf-loc">📍 Coral Gables, FL</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2023</span><span class="conf-type-tag">Competitive Paper</span><span class="conf-venue">Academy of Marketing Science (AMS)</span></div><div class="conf-title">Feeling Morally Elevated: When and Why a Previous Donor's Income Influences Observers' Subsequent Donation Behavior</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong>, Yexin Li &amp; Jenny Olson</div><div class="conf-loc">📍 New Orleans, LA</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2023</span><span class="conf-type-tag">Working Paper</span><span class="conf-venue">AMA Summer Academic Conference</span></div><div class="conf-title">Feature the Benefactor or the Victim? It Depends on Whom Donors Feel Closer to</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong> &amp; Jessica Li</div><div class="conf-loc">📍 San Francisco, CA</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2022</span><span class="conf-type-tag">Competitive Paper</span><span class="conf-venue">Association for Consumer Research (ACR)</span></div><div class="conf-title">It's the Heart That Matters: The Effect of Previous Benefactor's Income on Observers' Donation Behavior</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong>, Yexin Li &amp; Jenny Olson</div><div class="conf-loc">📍 Denver, CO</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2022</span><span class="conf-type-tag">AMA-EBSCO-RRBM Award Session</span><span class="conf-venue">AMA Summer Academic Conference</span></div><div class="conf-title">Coins Are Cold and Cards Are Caring: The Effect of Pre-giving Incentives on Relationship Norms and Donation Behavior</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong> &amp; Yexin Li</div><div class="conf-loc">📍 Chicago, IL</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2022</span><span class="conf-type-tag">Competitive Paper</span><span class="conf-venue">AMS Annual Conference</span></div><div class="conf-title">Feature the Benefactor or the Victim? How Charity Advertisements with Different Protagonist Foci Affect Donation Behavior</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong> &amp; Jessica Li</div><div class="conf-loc">📍 Monterey, CA</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2022</span><span class="conf-type-tag">Competitive Paper</span><span class="conf-venue">Society for Consumer Psychology (SCP)</span></div><div class="conf-title">It's the Heart that Matters: The Effect of Benefactor Income on Perceived Motivations, Moral Elevation, and Donation Behaviors</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong>, Yexin Li &amp; Jenny Olson</div><div class="conf-loc">📍 Virtual</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2021</span><span class="conf-type-tag">Competitive Paper</span><span class="conf-venue">Association for Consumer Research (ACR)</span></div><div class="conf-title">Let the Weak Lead the Strong: Low-Income Benefactors Motivate Others to Give</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong>, Yexin Li &amp; Jenny Olson</div><div class="conf-loc">📍 Virtual</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2020</span><span class="conf-type-tag">Competitive Paper</span><span class="conf-venue">AMA Winter Academic Conference</span></div><div class="conf-title">The Effect of Pre-giving Incentives on Relationship Norms and Donation Behavior</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong> &amp; Yexin Li</div><div class="conf-loc">📍 San Diego, CA</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2019</span><span class="conf-type-tag">Competitive Paper</span><span class="conf-venue">Society for Consumer Psychology (SCP)</span></div><div class="conf-title">The Effect of Pre-giving Incentives on Relationship Norms and Donation Behavior</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong> &amp; Yexin Li</div><div class="conf-loc">📍 Savannah, GA</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2018</span><span class="conf-type-tag">Competitive Paper</span><span class="conf-venue">Association for Consumer Research (ACR)</span></div><div class="conf-title">When Featuring a Benefactor (vs. Victim) Elicits More Donations: The Role of Moral Elevation and Group Membership in Charitable Donation</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong> &amp; Jin Seok Pyone</div><div class="conf-loc">📍 Dallas, TX</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2018</span><span class="conf-type-tag">Competitive Paper</span><span class="conf-venue">Society for Consumer Psychology (SCP)</span></div><div class="conf-title">Feature the Benefactor or the Victim? It Depends on Whom Donors Feel Closer to</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong> &amp; Jin Seok Pyone</div><div class="conf-loc">📍 Dallas, TX</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2017</span><span class="conf-type-tag">Competitive Paper</span><span class="conf-venue">Association for Consumer Research (ACR)</span></div><div class="conf-title">The Effect of Pre-giving Incentives on Relationship Norms and Donation Behavior</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong>, Yexin Li &amp; Surendra Singh</div><div class="conf-loc">📍 San Diego, CA</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2017</span><span class="conf-type-tag">Competitive Paper</span><span class="conf-venue">AMA Summer Academic Conference</span></div><div class="conf-title">The Effects of Pre-giving Incentives on Relationship Norms and Charitable Donations</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong>, Yexin Li &amp; Surendra Singh</div><div class="conf-loc">📍 San Francisco, CA</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2017</span><span class="conf-type-tag">Competitive Paper</span><span class="conf-venue">ISMS Marketing Science Conference</span></div><div class="conf-title">The Effects of Pre-giving Incentives on Relationship Norms and Charitable Donations</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong>, Yexin Li &amp; Surendra Singh</div><div class="conf-loc">📍 University of Southern California, Los Angeles, CA</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2016</span><span class="conf-type-tag">Doctoral Symposium</span><span class="conf-venue">Nebraska Symposium — Mittelstaedt Doctoral Symposium</span></div><div class="conf-title">The Effects of Pre-giving Incentives on Charitable Donations</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong>, Yexin Li &amp; Surendra Singh</div><div class="conf-loc">📍 Lincoln, NE</div></div>
+      <div class="conf-item reveal"><div class="conf-meta"><span class="conf-year">2015</span><span class="conf-type-tag">Working Paper</span><span class="conf-venue">Association for Consumer Research (ACR)</span></div><div class="conf-title">Fifty Cents or a Greeting Card? The Effects of Monetary and Non-monetary Pre-giving Incentives on Charitable Donations</div><div class="conf-authors"><strong>Bingqing (Miranda) Yin</strong>, Yexin Li &amp; Surendra Singh</div><div class="conf-loc">📍 New Orleans, LA</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="honors">
+  <div class="inner">
+    <div class="stag reveal">Recognition</div><h2 class="reveal">Honors, Grants &amp; Fellowships</h2><div class="sdiv reveal"></div>
+    <div class="honors-grid">
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🏆</div><div><div class="honor-name">Research, Scholarly and Creative Activities (RSCA) Grant</div><div class="honor-org">Cal Poly</div></div></div><span class="honor-year">2025–2026</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🏆</div><div><div class="honor-name">Noyce Grant</div><div class="honor-org">Cal Poly</div></div></div><span class="honor-year">2025–2026</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🏆</div><div><div class="honor-name">Teacher-Scholar Mini Grant</div><div class="honor-org">Cal Poly</div></div></div><span class="honor-year">2024–2025</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🏆</div><div><div class="honor-name">R-EDGE Research Grant</div><div class="honor-org">Cal Poly</div></div></div><span class="honor-year">2023–2024</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🎖️</div><div><div class="honor-name">Teaching Award</div><div class="honor-org">Orfalea College of Business, Cal Poly</div></div></div><span class="honor-year">2023</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🏆</div><div><div class="honor-name">Research, Scholarly and Creative Activities (RSCA) Grant</div><div class="honor-org">Cal Poly</div></div></div><span class="honor-year">2022–2023</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🥈</div><div><div class="honor-name">Finalist, AMA-EBSCO-RRBM Award for Responsible Research in Marketing</div><div class="honor-org">American Marketing Association</div></div></div><span class="honor-year">2022</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🥇</div><div><div class="honor-name">Gold Wasmer Excellence in Research Award</div><div class="honor-org">John Carroll University</div></div></div><span class="honor-year">2020</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🥈</div><div><div class="honor-name">Silver Wasmer Excellence in Research Award</div><div class="honor-org">John Carroll University</div></div></div><span class="honor-year">2020</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🎓</div><div><div class="honor-name">Max E. Fessler Dissertation Award</div><div class="honor-org">University of Kansas</div></div></div><span class="honor-year">2019</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">📜</div><div><div class="honor-name">John O. Tollefson Best Paper Award</div><div class="honor-org">University of Kansas</div></div></div><span class="honor-year">2019</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🎖️</div><div><div class="honor-name">John O. Tollefson Doctoral Student Teaching Award</div><div class="honor-org">University of Kansas</div></div></div><span class="honor-year">2018</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">💰</div><div><div class="honor-name">General Research Fund ($8,700, with Jin Seok Pyone)</div><div class="honor-org">University of Kansas</div></div></div><span class="honor-year">2018</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">💰</div><div><div class="honor-name">General Research Fund ($4,709)</div><div class="honor-org">University of Kansas</div></div></div><span class="honor-year">2017</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🎓</div><div><div class="honor-name">AMA Sheth Doctoral Consortium Fellow</div><div class="honor-org">University of Notre Dame</div></div></div><span class="honor-year">2016</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">📜</div><div><div class="honor-name">School of Business Best Paper Award</div><div class="honor-org">University of Kansas</div></div></div><span class="honor-year">2016</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">💰</div><div><div class="honor-name">General Research Fund ($7,000, with Jessica Li)</div><div class="honor-org">University of Kansas</div></div></div><span class="honor-year">2015–2016</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🎓</div><div><div class="honor-name">School of Business Graduate Fellowship</div><div class="honor-org">University of Kansas</div></div></div><span class="honor-year">2013–2018</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🌟</div><div><div class="honor-name">Outstanding Research Award — "Beauty in the Age of Marketing"</div><div class="honor-org">Hawaii Global Conference on Business and Finance</div></div></div><span class="honor-year">2012</span></div>
+      <div class="honor-card reveal"><div class="honor-header"><div class="honor-icon">🎓</div><div><div class="honor-name">Prairie Band Scholarship</div><div class="honor-org">Washburn University</div></div></div><span class="honor-year">2010–2011</span></div>
+    </div>
+  </div>
+</section>
+
 <section id="ai-assistant">
   <div class="inner">
-    <div class="stag reveal">AI-Powered Feature</div>
-    <h2 class="reveal">Ask About My Research</h2>
-    <div class="sdiv reveal"></div>
+    <div class="stag reveal">AI-Powered Feature</div><h2 class="reveal">Ask About My Research</h2><div class="sdiv reveal"></div>
     <p class="section-lead reveal">Curious about my work? Ask my AI research assistant anything about my publications, research interests, teaching, or academic background.</p>
     <div class="ai-card reveal">
       <div class="ai-header">
         <div class="ai-avatar">🤖</div>
-        <div>
-          <div class="ai-title">Miranda's Research Assistant</div>
-          <div class="ai-sub">Expert in prosocial behavior &amp; consumer psychology</div>
-        </div>
+        <div><div class="ai-title">Miranda's Research Assistant</div><div class="ai-sub">Expert in prosocial behavior &amp; consumer psychology</div></div>
         <div class="ai-online">Online</div>
       </div>
       <div class="chat-win" id="chatWin">
@@ -612,72 +471,40 @@
         <span class="sugg" onclick="askS(this)">Tell me about the coins vs. cards study</span>
         <span class="sugg" onclick="askS(this)">How does AI affect prosocial behavior?</span>
         <span class="sugg" onclick="askS(this)">What journals have you published in?</span>
-        <span class="sugg" onclick="askS(this)">What field partners do you work with?</span>
+        <span class="sugg" onclick="askS(this)">What awards have you received?</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Press & Media -->
 <section id="media">
   <div class="inner">
-    <div class="stag reveal">Press &amp; Media</div>
-    <h2 class="reveal">In the News</h2>
-    <div class="sdiv reveal"></div>
+    <div class="stag reveal">Press &amp; Media</div><h2 class="reveal">In the News</h2><div class="sdiv reveal"></div>
     <div class="press-controls reveal">
       <input class="press-search" id="pressQ" type="text" placeholder="🔍  Search press coverage…" oninput="filtPress()" />
-      <select class="press-select" id="pressType" onchange="filtPress()">
-        <option value="">All types</option>
-        <option>Article</option>
-        <option>Radio</option>
-        <option>TV</option>
-      </select>
-      <select class="press-select" id="pressSort" onchange="filtPress()">
-        <option value="date_desc">Newest first</option>
-        <option value="date_asc">Oldest first</option>
-        <option value="outlet">Outlet A→Z</option>
-      </select>
+      <select class="press-select" id="pressType" onchange="filtPress()"><option value="">All types</option><option>Article</option><option>Radio</option><option>TV</option></select>
+      <select class="press-select" id="pressSort" onchange="filtPress()"><option value="date_desc">Newest first</option><option value="date_asc">Oldest first</option><option value="outlet">Outlet A→Z</option></select>
     </div>
     <div class="year-chips" id="yearChips"></div>
     <div class="press-grid" id="pressGrid"></div>
   </div>
 </section>
 
-<!-- Teaching -->
 <section id="teaching">
   <div class="inner">
-    <div class="stag reveal">Education</div>
-    <h2 class="reveal">Teaching</h2>
-    <div class="sdiv reveal"></div>
+    <div class="stag reveal">Education</div><h2 class="reveal">Teaching</h2><div class="sdiv reveal"></div>
     <p class="section-lead reveal">I weave my research findings directly into the classroom — inviting students to question, test, and extend the ideas we explore. My goal is to make consumer behavior both intellectually rigorous and deeply relevant to real-world decisions.</p>
     <div class="crs-grid">
-      <div class="crs reveal">
-        <div class="crs-num">BUS 346</div>
-        <h3>Consumer Behavior</h3>
-        <p>An applied deep-dive into how psychological, social, and cultural forces shape consumer choices — with live research woven throughout the semester.</p>
-        <span class="crs-level">Undergraduate</span>
-      </div>
-      <div class="crs reveal">
-        <div class="crs-num">Marketing</div>
-        <h3>Principles of Marketing</h3>
-        <p>Foundational marketing strategy — segmentation, targeting, positioning, and brand building — grounded in behavioral evidence and real cases.</p>
-        <span class="crs-level">Undergraduate</span>
-      </div>
-      <div class="crs reveal">
-        <div class="crs-num">Research</div>
-        <h3>Consumer Insights &amp; Analytics</h3>
-        <p>Quantitative and qualitative methods for understanding consumers — from experimental design to data analysis and actionable insight generation.</p>
-        <span class="crs-level">Advanced</span>
-      </div>
+      <div class="crs reveal"><div class="crs-num">BUS 346</div><h3>Consumer Behavior</h3><p>An applied deep-dive into how psychological, social, and cultural forces shape consumer choices — with live research woven throughout the semester.</p><span class="crs-level">Undergraduate</span></div>
+      <div class="crs reveal"><div class="crs-num">Marketing</div><h3>Principles of Marketing</h3><p>Foundational marketing strategy — segmentation, targeting, positioning, and brand building — grounded in behavioral evidence and real cases.</p><span class="crs-level">Undergraduate</span></div>
+      <div class="crs reveal"><div class="crs-num">Research</div><h3>Consumer Insights &amp; Analytics</h3><p>Quantitative and qualitative methods for understanding consumers — from experimental design to data analysis and actionable insight generation.</p><span class="crs-level">Advanced</span></div>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
 <section id="contact">
   <div class="inner contact-wrap">
-    <div class="stag reveal" style="justify-content:center">Get In Touch</div>
-    <h2 class="reveal">Let's Connect</h2>
+    <div class="stag reveal" style="justify-content:center">Get In Touch</div><h2 class="reveal">Let's Connect</h2>
     <div class="sdiv reveal" style="margin:1rem auto 2rem"></div>
     <p class="reveal">Whether you're a fellow researcher, journalist, nonprofit leader, or student — I'd love to hear from you.</p>
     <div class="clinks reveal">
@@ -695,15 +522,14 @@
   <p>© <span id="yr"></span> <strong>Bingqing (Miranda) Yin, Ph.D.</strong> · Orfalea College of Business, Cal Poly SLO · Built with ✨ and AI</p>
 </footer>
 
-<!-- ─── Press Data ─────────────────────────────────────────────── -->
 <script type="application/json" id="press-data">[
   {"title":"Cal Poly research: When gift packaging backfires","outlet":"San Luis Obispo Tribune","type":"Article","date":"2025-01-15","url":"https://www.sanluisobispo.com/news/local/education/cal-poly-university/article296558324.html","tags":["Gift Packaging","Consumer Behavior","Cal Poly"]},
   {"title":"Don't Overpackage that Christmas Gift, Says Cal Poly Marketing Professor","outlet":"Orfalea College of Business","type":"Article","date":"2024-12-03","url":"https://orfalea.calpoly.edu/about-us/news/dont-overpackage-that-christmas-gift-says-cal-poly-marketing-professor/","image":"https://orfalea.calpoly.edu/wp-content/uploads/2024/12/Hero.png","tags":["Gift Packaging","Journal of Retailing","Cal Poly"]},
   {"title":"Thoughtful or Thoughtless? Settling The Overpackaging Debate","outlet":"Psychiatrist.com","type":"Article","date":"2024-12-20","url":"https://www.psychiatrist.com/news/thoughtful-or-thoughtless-settling-the-overpackaging-debate/","tags":["Gift Packaging","Consumer Behavior"]},
   {"title":"Symmetric Overpackaging: Attitudes of Gift Givers and Recipients","outlet":"Improbable Research","type":"Article","date":"2024-12-11","url":"https://improbable.com/2024/12/11/symmetric-overpackaging-attitudes-of-gift-givers-and-recipients/","image":"https://improbable.com/wp-content/uploads/2024/12/overpackaged-hand-cream.jpg","tags":["Gift Packaging","Journal of Retailing"]},
-  {"title":"New research says that less is more when it comes to fancy gift packaging","outlet":"KCLU (NPR member station)","type":"Radio","date":"2024-12-09","url":"https://www.kclu.org/2024-12-09/new-research-says-that-less-is-more-when-it-comes-to-fancy-gift-packaging","image":"https://npr.brightspotcdn.com/dims4/default/6e93339/2147483647/strip/true/crop/3648x2442%2B0%2B0/resize/880x589%21/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fd6%2F04%2F4fdb9c3748f1ae4b174c74d7fddc%2Fmaia-i-cdvebnin60u-unsplash.jpg","tags":["Interview","Gift Packaging","Radio"]},
-  {"title":"How to wrap sustainably and reduce waste this holiday season","outlet":"KSBY","type":"Article","date":"2024-12-23","url":"https://www.ksby.com/san-luis-obispo/how-to-wrap-sustainably-and-reduce-waste-this-holiday-season","image":"https://cf.cdn.uplynk.com/ause/slices/bd2/1caad701706c40c597cac38040cf164a/bd2332b3579e47339a60a292403f5245/poster_b1455e3358d9481ab61ae171e252271b.jpg","tags":["Sustainability","Holiday","Local News"]},
-  {"title":"Do those receiving Christmas gifts prefer more or less wrapping?","outlet":"Meteored / TheWeather.com","type":"Article","date":"2024-12-17","url":"https://www.theweather.com/news/trending/do-those-receiving-christmas-gifts-prefer-more-or-less-wrapping.html","image":"https://services.meteored.com/img/article/gift-wrapping-is-less-more-or-is-more-packaging-the-better-1734365189435_1024.jpeg","tags":["Holiday","Gift Packaging","International"]},
+  {"title":"New research says that less is more when it comes to fancy gift packaging","outlet":"KCLU (NPR member station)","type":"Radio","date":"2024-12-09","url":"https://www.kclu.org/2024-12-09/new-research-says-that-less-is-more-when-it-comes-to-fancy-gift-packaging","tags":["Interview","Gift Packaging","Radio"]},
+  {"title":"How to wrap sustainably and reduce waste this holiday season","outlet":"KSBY","type":"Article","date":"2024-12-23","url":"https://www.ksby.com/san-luis-obispo/how-to-wrap-sustainably-and-reduce-waste-this-holiday-season","tags":["Sustainability","Holiday","Local News"]},
+  {"title":"Do those receiving Christmas gifts prefer more or less wrapping?","outlet":"Meteored / TheWeather.com","type":"Article","date":"2024-12-17","url":"https://www.theweather.com/news/trending/do-those-receiving-christmas-gifts-prefer-more-or-less-wrapping.html","tags":["Holiday","Gift Packaging","International"]},
   {"title":"Summer Undergraduate Research Program: Spotlight on Dr. Miranda Yin","outlet":"Orfalea College of Business","type":"Article","date":"2024-03-06","url":"https://www.linkedin.com/posts/cal-poly-orfalea-college-of-business_this-surp-spotlight-is-on-assistant-professor-activity-7113598578069012481-hlr8/","tags":["SURP","Undergraduate Research","Mentorship"]},
   {"title":"Why Marketing: A Conversation with Dr. Miranda Yin","outlet":"Cal Poly Women in Business","type":"Article","date":"2023-03-08","url":"https://www.cpwomeninbusiness.com/whymarketing","tags":["Marketing","Women in Business","Cal Poly"]},
   {"title":"How to Design Charity Campaigns for Maximal ROI","outlet":"American Marketing Association (AMA)","type":"Article","date":"2020-07-31","url":"https://www.ama.org/2020/07/31/how-to-design-charity-campaigns-for-maximal-roi/","tags":["Charitable Giving","Marketing Strategy"]},
@@ -713,7 +539,6 @@
 ]</script>
 
 <script>
-/* ─── Particles ──────────────────────────────────────────────── */
 (function(){
   const c=document.getElementById('particles'),ctx=c.getContext('2d');
   let W,H,pts=[];
@@ -722,78 +547,38 @@
   for(let i=0;i<65;i++) pts.push({x:Math.random()*1920,y:Math.random()*1080,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*1.4+.5,a:Math.random()});
   function draw(){
     ctx.clearRect(0,0,W,H);
-    pts.forEach(p=>{
-      p.x+=p.vx;p.y+=p.vy;
-      if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
-      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=`rgba(201,168,76,${p.a*.38})`;ctx.fill();
-    });
-    for(let i=0;i<pts.length;i++) for(let j=i+1;j<pts.length;j++){
-      const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
-      if(d<115){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
-        ctx.strokeStyle=`rgba(108,99,255,${(1-d/115)*.11})`;ctx.lineWidth=.5;ctx.stroke();}
-    }
+    pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(201,168,76,${p.a*.38})`;ctx.fill();});
+    for(let i=0;i<pts.length;i++) for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<115){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(108,99,255,${(1-d/115)*.11})`;ctx.lineWidth=.5;ctx.stroke();}}
     requestAnimationFrame(draw);
   }
   draw();
 })();
-
-/* ─── Typewriter ─────────────────────────────────────────────── */
 (function(){
   const phrases=['Charitable Giving 💛','Prosocial Behavior 🤝','Relationship Norms 🔗','Gift-Giving Psychology 🎁','AI & Empathy 🤖','Consumer Decision-Making 🧠','Social Impact Marketing 📢'];
   let pi=0,ci=0,del=false;
   const el=document.getElementById('typed');
-  function tick(){
-    const ph=phrases[pi];
-    if(!del){el.textContent=ph.slice(0,++ci);if(ci===ph.length){del=true;setTimeout(tick,1900);return;}}
-    else{el.textContent=ph.slice(0,--ci);if(ci===0){del=false;pi=(pi+1)%phrases.length;}}
-    setTimeout(tick,del?38:68);
-  }
+  function tick(){const ph=phrases[pi];if(!del){el.textContent=ph.slice(0,++ci);if(ci===ph.length){del=true;setTimeout(tick,1900);return;}}else{el.textContent=ph.slice(0,--ci);if(ci===0){del=false;pi=(pi+1)%phrases.length;}}setTimeout(tick,del?38:68);}
   tick();
 })();
-
-/* ─── Scroll Reveal ──────────────────────────────────────────── */
-new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:.1})
-  .observe==(function(){
-    const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:.1});
-    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-  })();
-
-/* ─── Publication Filter ─────────────────────────────────────── */
+const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 let activeTag='all';
 function filtPubs(){
   const q=document.getElementById('pubQ').value.toLowerCase();
-  document.querySelectorAll('.pub').forEach(p=>{
-    const text=p.textContent.toLowerCase(),tags=p.dataset.tags||'';
-    p.classList.toggle('hidden',!((!q||text.includes(q))&&(activeTag==='all'||tags.includes(activeTag))));
-  });
+  document.querySelectorAll('.pub').forEach(p=>{const text=p.textContent.toLowerCase(),tags=p.dataset.tags||'';p.classList.toggle('hidden',!((!q||text.includes(q))&&(activeTag==='all'||tags.includes(activeTag))));});
 }
-function setTag(tag,btn){
-  activeTag=tag;
-  document.querySelectorAll('.filt').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');filtPubs();
-}
-
-/* ─── Press Section ──────────────────────────────────────────── */
-const pressItems=JSON.parse(document.getElementById('press-data').textContent)
-  .map((d,i)=>({...d,_i:i,_date:new Date(d.date+'T00:00:00')}));
+function setTag(tag,btn){activeTag=tag;document.querySelectorAll('.filt').forEach(b=>b.classList.remove('active'));btn.classList.add('active');filtPubs();}
+const pressItems=JSON.parse(document.getElementById('press-data').textContent).map((d,i)=>({...d,_i:i,_date:new Date(d.date+'T00:00:00')}));
 const FALLBACK='https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=60';
 let activeYear='';
-
 function buildYearChips(){
   const years=[...new Set(pressItems.map(p=>p._date.getFullYear()))].sort((a,b)=>b-a);
-  const wrap=document.getElementById('yearChips');
-  wrap.innerHTML='';
+  const wrap=document.getElementById('yearChips');wrap.innerHTML='';
   const all=document.createElement('button');all.className='ychip active';all.textContent='All Years';
   all.onclick=()=>{activeYear='';document.querySelectorAll('.ychip').forEach(c=>c.classList.remove('active'));all.classList.add('active');filtPress();};
   wrap.appendChild(all);
-  years.forEach(y=>{
-    const b=document.createElement('button');b.className='ychip';b.textContent=y;
-    b.onclick=()=>{activeYear=(activeYear==y?'':y);document.querySelectorAll('.ychip').forEach(c=>c.classList.remove('active'));if(activeYear)b.classList.add('active');else all.classList.add('active');filtPress();};
-    wrap.appendChild(b);
-  });
+  years.forEach(y=>{const b=document.createElement('button');b.className='ychip';b.textContent=y;b.onclick=()=>{activeYear=(activeYear==y?'':y);document.querySelectorAll('.ychip').forEach(c=>c.classList.remove('active'));if(activeYear)b.classList.add('active');else all.classList.add('active');filtPress();};wrap.appendChild(b);});
 }
-
 function filtPress(){
   const q=document.getElementById('pressQ').value.trim().toLowerCase();
   const type=document.getElementById('pressType').value;
@@ -806,79 +591,28 @@ function filtPress(){
   else if(sort==='date_asc') list.sort((a,b)=>a._date-b._date);
   else if(sort==='outlet') list.sort((a,b)=>(a.outlet||'').localeCompare(b.outlet||''));
   const grid=document.getElementById('pressGrid');
-  grid.innerHTML=list.map(p=>{
-    const tags=(p.tags||[]).map(t=>`<span class="pcard-tag">${t}</span>`).join('');
-    const img=p.image?`<img src="${p.image}" alt="" onerror="this.src='${FALLBACK}'" loading="lazy"/>`:`<img src="${FALLBACK}" alt="" loading="lazy"/>`;
-    return `<div class="pcard reveal" data-i="${p._i}">
-      <div class="pcard-img">${img}</div>
-      <div class="pcard-body">
-        <div class="pcard-source">${p.outlet}</div>
-        <div class="pcard-title">${p.title}</div>
-        <div class="pcard-meta">${p.date} · ${p.type||'Article'}</div>
-        <div class="pcard-tags">${tags}</div>
-        <a class="pcard-link" href="${p.url}" target="_blank" rel="noopener">Read story →</a>
-      </div>
-    </div>`;
-  }).join('');
-  // re-observe new .reveal elements
+  grid.innerHTML=list.map(p=>{const tags=(p.tags||[]).map(t=>`<span class="pcard-tag">${t}</span>`).join('');const img=p.image?`<img src="${p.image}" alt="" onerror="this.src='${FALLBACK}'" loading="lazy"/>`:`<img src="${FALLBACK}" alt="" loading="lazy"/>`;return `<div class="pcard reveal" data-i="${p._i}"><div class="pcard-img">${img}</div><div class="pcard-body"><div class="pcard-source">${p.outlet}</div><div class="pcard-title">${p.title}</div><div class="pcard-meta">${p.date} · ${p.type||'Article'}</div><div class="pcard-tags">${tags}</div><a class="pcard-link" href="${p.url}" target="_blank" rel="noopener">Read story →</a></div></div>`;}).join('');
   grid.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 }
-
-const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:.08});
-document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 buildYearChips();filtPress();
 document.getElementById('pressQ').addEventListener('input',filtPress);
-
-/* ─── AI Assistant ───────────────────────────────────────────── */
 const KB=[
-  [['main research','research focus','study','work on','what do you research'],
-   "My research focuses on <strong>prosocial consumer behavior</strong> — specifically the psychology behind charitable giving, incentive design, and social impact marketing. I use lab and field experiments to understand what motivates helping behavior, and partner with nonprofits to put those findings to work."],
-  [['coins','cards','pregiving','incentive','relationship norm','cold'],
-   "That's my most-cited paper! In <em>'Coins Are Cold and Cards Are Caring'</em> (Journal of Marketing, 2020), we found that the <em>physical form</em> of a pregiving incentive signals different relationship norms. A coin feels transactional (exchange norm), while a gift card feels caring (communal norm) — and this perception significantly changes how donors view the charity and whether they give."],
-  [['ai','empathy','artificial intelligence','empathetic ai','robot','chatbot'],
-   "Great question! My 2025 paper in the Journal of Service Research shows that interacting with a <strong>high-empathy AI</strong> significantly increases people's intentions to donate and volunteer. The key psychological pathway is feeling emotionally understood — even by a non-human agent. This has exciting implications for AI design in nonprofit and service contexts!"],
-  [['gift','packaging','overpackag','christmas','wrap','wrapping'],
-   "My 2024 Journal of Retailing paper reveals an important asymmetry: <strong>gift-givers</strong> believe elaborate packaging signals thoughtfulness, but <strong>recipients</strong> actually prefer simplicity and focus on what's inside. This 'packaging mismatch' has real implications for brands, sustainability, and holiday marketing strategy."],
-  [['journal','publish','where','publication'],
-   "I've published in top journals including:<br>• <strong>Journal of Marketing</strong> (2020)<br>• <strong>Journal of Retailing</strong> (2024)<br>• <strong>International Journal of Research in Marketing</strong> (2023)<br>• <strong>Journal of Service Research</strong> (2025)"],
-  [['cal poly','teach','course','class','student','teaching','bus 346'],
-   "I'm an Assistant Professor at <strong>Cal Poly's Orfalea College of Business</strong> in San Luis Obispo. I teach Consumer Behavior (BUS 346) and related courses. I love bringing my research into the classroom — students often help me think through new questions and challenge my assumptions!"],
-  [['phd','education','kansas','degree','background','university of kansas'],
-   "I earned my <strong>Ph.D. in Marketing from the University of Kansas</strong>. Before Cal Poly, I was at John Carroll University's Boler College of Business. My academic path has been shaped by a deep curiosity about the psychology of helping — and a desire to make social science useful for real organizations."],
-  [['partner','nonprofit','salvation army','food bank','organization','field','slo food'],
-   "I partner with several organizations for field experiments: the <strong>Salvation Army</strong>, <strong>Headquarters Counseling Center</strong>, the <strong>Learning Center</strong>, and the <strong>SLO Food Bank</strong>. For example, I ran a direct mail experiment with the SLO Food Bank — sending 6,000 donation letters with different designs to test which charitable appeals generate more giving."],
-  [['in-group','out-group','benefactor','recipient','2023'],
-   "In my 2023 IJRM paper, I examine how to design better charitable appeals when asking donors to help <em>out-group</em> recipients (people unlike themselves). The key finding: <strong>benefactor-focused appeals</strong> that emphasize the giver's positive identity outperform recipient-focused appeals in these contexts, by strategically engaging in-group psychology."],
-  [['contact','email','reach','connect'],
-   "You can reach me at <strong>byin@calpoly.edu</strong>, or find me on <a href='https://scholar.google.com/citations?user=0zBOAPwAAAAJ' target='_blank'>Google Scholar</a>, <a href='https://www.researchgate.net/profile/Bingqing-Yin-2' target='_blank'>ResearchGate</a>, and <a href='https://www.linkedin.com/in/miranda-yin-241a7665/' target='_blank'>LinkedIn</a>!"],
-  [['press','media','news','featured','interview','radio'],
-   "I've been featured in 13+ press outlets including the San Luis Obispo Tribune, KCLU (NPR), Daily Mail, American Marketing Association, Phys.org, and more. Most recently my gift-packaging research received wide holiday media coverage in late 2024. Check the Press section of this site for the full list!"],
+  [['main research','research focus','study','work on'],`My research focuses on <strong>prosocial consumer behavior</strong> — charitable giving, incentive design, gift-giving, and AI empathy. I use lab and field experiments to understand what motivates helping behavior.`],
+  [['coins','cards','pregiving','incentive','relationship norm'],`In <em>'Coins Are Cold and Cards Are Caring'</em> (Journal of Marketing, 2020), we found that the physical form of a pregiving incentive signals different relationship norms — a coin feels transactional, a gift card feels caring — significantly changing donation behavior.`],
+  [['ai','empathy','artificial intelligence','empathetic'],`My 2025 paper in the Journal of Service Research shows that interacting with a <strong>high-empathy AI</strong> significantly increases donation and volunteering intentions. The key pathway is feeling emotionally understood — even by a non-human agent.`],
+  [['gift','packaging','overpackag','christmas','wrap'],`My 2024 Journal of Retailing paper reveals an asymmetry: gift-givers believe elaborate packaging signals thoughtfulness, but recipients prefer simplicity and focus on what's inside.`],
+  [['journal','publish','where','publication'],`I've published in: <strong>Journal of Marketing</strong> (FT50, 2020), <strong>Journal of Business Ethics</strong> (FT50, 2025), <strong>Journal of Retailing</strong> (2024), <strong>Journal of Service Research</strong> (2025), <strong>Journal of Advertising</strong> (2023), <strong>IJRM</strong> (2020), <strong>Journal of Product and Brand Management</strong> (2017).`],
+  [['award','honor','grant','fellowship'],`Key honors include: RSCA &amp; Noyce Grants at Cal Poly (2025-26), R-EDGE Grant (2023-24), Teaching Award OCOB (2023), Gold &amp; Silver Wasmer Research Awards at JCU (2020), Max E. Fessler Dissertation Award at KU (2019), AMA Sheth Doctoral Consortium Fellow (2016).`],
+  [['conference','acr','ama','ams','scp'],`I've presented 20+ competitive papers at ACR, AMA, AMS, SCP, and ISMS, most recently at ACR 2025 in Washington DC on empathetic AI and prosocial behavior.`],
+  [['cal poly','teach','course','bus 346'],`I'm an Assistant Professor at <strong>Cal Poly's Orfalea College of Business</strong>. I teach Consumer Behavior (BUS 346), Principles of Marketing, and related courses.`],
+  [['phd','kansas','education','background'],`I earned my <strong>Ph.D. in Marketing from the University of Kansas</strong>. Before Cal Poly, I was at John Carroll University.`],
+  [['partner','nonprofit','salvation army','food bank'],`I partner with the <strong>Salvation Army</strong>, <strong>Headquarters Counseling Center</strong>, <strong>Learning Center</strong>, and <strong>SLO Food Bank</strong> for field experiments, including a 6,000-person direct mail campaign.`],
+  [['contact','email','reach'],`Reach me at <strong>byin@calpoly.edu</strong> or on <a href='https://scholar.google.com/citations?user=0zBOAPwAAAAJ' target='_blank'>Google Scholar</a> and <a href='https://www.linkedin.com/in/miranda-yin-241a7665/' target='_blank'>LinkedIn</a>.`],
 ];
-
-function getBotReply(q){
-  q=q.toLowerCase();
-  for(const [ks,resp] of KB) if(ks.some(k=>q.includes(k))) return resp;
-  return "That's an interesting question! I may not have details on that specific topic. For the most comprehensive information, I'd suggest reaching out directly at <strong>byin@calpoly.edu</strong> or checking Dr. Yin's <a href='https://scholar.google.com/citations?user=0zBOAPwAAAAJ' target='_blank'>Google Scholar profile</a>. Can I help with anything else about her research?";
-}
-
-function addMsg(text,cls){
-  const win=document.getElementById('chatWin');
-  const d=document.createElement('div');d.className='msg '+cls;
-  d.innerHTML=text;win.appendChild(d);win.scrollTop=win.scrollHeight;
-}
-
-function sendMsg(){
-  const inp=document.getElementById('aiInp'),q=inp.value.trim();if(!q)return;
-  addMsg(q,'user');inp.value='';
-  const win=document.getElementById('chatWin');
-  const t=document.createElement('div');t.className='msg bot';t.id='thinking';
-  t.innerHTML='<em style="color:var(--muted)">Thinking…</em>';win.appendChild(t);win.scrollTop=win.scrollHeight;
-  setTimeout(()=>{t.remove();addMsg(getBotReply(q),'bot');},650);
-}
-
+function getBotReply(q){q=q.toLowerCase();for(const[ks,resp] of KB)if(ks.some(k=>q.includes(k)))return resp;return `Great question! For details, reach out at <strong>byin@calpoly.edu</strong> or check my <a href='https://scholar.google.com/citations?user=0zBOAPwAAAAJ' target='_blank'>Google Scholar profile</a>.`;}
+function addMsg(text,cls){const win=document.getElementById('chatWin');const d=document.createElement('div');d.className='msg '+cls;d.innerHTML=text;win.appendChild(d);win.scrollTop=win.scrollHeight;}
+function sendMsg(){const inp=document.getElementById('aiInp'),q=inp.value.trim();if(!q)return;addMsg(q,'user');inp.value='';const win=document.getElementById('chatWin');const t=document.createElement('div');t.className='msg bot';t.id='thinking';t.innerHTML='<em style="color:var(--muted)">Thinking…</em>';win.appendChild(t);win.scrollTop=win.scrollHeight;setTimeout(()=>{t.remove();addMsg(getBotReply(q),'bot');},650);}
 function askS(el){document.getElementById('aiInp').value=el.textContent;sendMsg();}
-
-/* ─── Footer year ────────────────────────────────────────────── */
 document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
 </body>
