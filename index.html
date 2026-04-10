@@ -11,10 +11,10 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #ffffff; --bg2: #eef4ff;
-      --surface: rgba(26,86,219,0.05); --surface2: rgba(26,86,219,0.09);
-      --border: rgba(26,86,219,0.14);
-      --gold: #1a56db; --gold2: #1e40af;
+      --bg: #ffffff; --bg2: #e8f7ff;
+      --surface: rgba(0,119,182,0.05); --surface2: rgba(0,119,182,0.09);
+      --border: rgba(0,119,182,0.14);
+      --gold: #0077b6; --gold2: #023e8a;
       --text: #0f172a; --muted: #64748b;
       --accent: #6c63ff; --accent2: #a78bfa;
       --green: #4ade80; --radius: 16px;
@@ -23,7 +23,7 @@
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; line-height: 1.7; }
     a { color: var(--gold); text-decoration: none; transition: color .2s; }
     a:hover { color: var(--gold2); }
-    ::selection { background: rgba(26,86,219,.25); }
+    ::selection { background: rgba(0,119,182,.25); }
     #particles { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .7; }
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -44,12 +44,12 @@
     .nav-mobile.open { display: flex; }
     .nav-mobile a { color: var(--muted); font-size: .9rem; }
     .nav-mobile a:hover { color: var(--gold2); }
-    #hero { position: relative; z-index: 1; min-height: 100vh; display: flex; align-items: center; padding: 7rem 5vw 5rem; background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(26,86,219,.07), transparent), radial-gradient(ellipse 40% 40% at 85% 85%, rgba(124,58,237,.05), transparent); }
+    #hero { position: relative; z-index: 1; min-height: 100vh; display: flex; align-items: center; padding: 7rem 5vw 5rem; background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(0,119,182,.07), transparent), radial-gradient(ellipse 40% 40% at 85% 85%, rgba(124,58,237,.05), transparent); }
     .hero-inner { max-width: 860px; margin: 0 auto; text-align: center; }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); background: rgba(26,86,219,.1); border: 1px solid rgba(26,86,219,.25); padding: .35rem 1.1rem; border-radius: 50px; margin-bottom: 2rem; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); background: rgba(0,119,182,.1); border: 1px solid rgba(0,119,182,.25); padding: .35rem 1.1rem; border-radius: 50px; margin-bottom: 2rem; }
     .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.4)} }
-    .hero-photo { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; object-position: top; border: 3px solid transparent; background: linear-gradient(var(--bg), var(--bg)) padding-box, linear-gradient(135deg, var(--gold), var(--accent)) border-box; box-shadow: 0 0 40px rgba(26,86,219,.2); margin-bottom: 1.8rem; }
+    .hero-photo { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; object-position: top; border: 3px solid transparent; background: linear-gradient(var(--bg), var(--bg)) padding-box, linear-gradient(135deg, var(--gold), var(--accent)) border-box; box-shadow: 0 0 40px rgba(0,119,182,.2); margin-bottom: 1.8rem; }
     h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5.5vw, 3.8rem); line-height: 1.12; font-weight: 700; margin-bottom: .8rem; }
     .name-gradient { background: linear-gradient(135deg, var(--gold) 20%, var(--accent) 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .hero-subtitle { font-size: clamp(.95rem, 2vw, 1.2rem); color: var(--muted); font-weight: 300; margin-bottom: 1.5rem; min-height: 1.8rem; }
@@ -57,8 +57,8 @@
     .hero-bio { max-width: 660px; margin: 0 auto 2.2rem; font-size: 1rem; color: #4b5563; line-height: 1.82; }
     .hero-cta { display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap; }
     .btn { padding: .72rem 1.7rem; border-radius: 50px; font-size: .88rem; font-weight: 500; cursor: pointer; transition: all .25s; display: inline-flex; align-items: center; gap: .45rem; border: none; }
-    .btn-gold { background: linear-gradient(135deg, var(--gold), #1232aa); color: #ffffff; box-shadow: 0 4px 22px rgba(26,86,219,.3); }
-    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(26,86,219,.4); color: #ffffff; }
+    .btn-gold { background: linear-gradient(135deg, var(--gold), #01497c); color: #ffffff; box-shadow: 0 4px 22px rgba(0,119,182,.3); }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,119,182,.4); color: #ffffff; }
     .btn-ghost { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
     .btn-ghost:hover { background: var(--surface2); transform: translateY(-2px); border-color: rgba(255,255,255,.18); color: var(--text); }
     .hero-stats { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid var(--border); }
@@ -83,17 +83,17 @@
     .bdot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
     .about-text p { color: #374151; font-size: .99rem; margin-bottom: 1.1rem; line-height: 1.8; }
     .pills { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.6rem; }
-    .pill { padding: .35rem .95rem; border-radius: 50px; font-size: .8rem; font-weight: 500; border: 1px solid rgba(26,86,219,.3); color: var(--gold2); background: rgba(26,86,219,.06); }
+    .pill { padding: .35rem .95rem; border-radius: 50px; font-size: .8rem; font-weight: 500; border: 1px solid rgba(0,119,182,.3); color: var(--gold2); background: rgba(0,119,182,.06); }
     .edu-list { margin-top: 1.8rem; display: flex; flex-direction: column; gap: .9rem; }
     .edu-item { display: flex; gap: .9rem; align-items: flex-start; padding: .9rem 1.1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
     .edu-icon { font-size: 1.3rem; flex-shrink: 0; }
     .edu-deg { font-weight: 600; font-size: .92rem; }
     .edu-sch { color: var(--muted); font-size: .83rem; }
-    #research { background: radial-gradient(ellipse 50% 55% at 95% 50%, rgba(26,86,219,.05), transparent); }
+    #research { background: radial-gradient(ellipse 50% 55% at 95% 50%, rgba(0,119,182,.05), transparent); }
     .grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.3rem; }
     .rcard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.7rem; transition: all .3s; position: relative; overflow: hidden; cursor: default; }
-    .rcard::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(108,99,255,.07), rgba(26,86,219,.05)); opacity: 0; transition: opacity .3s; }
-    .rcard:hover { transform: translateY(-4px); border-color: rgba(26,86,219,.28); box-shadow: 0 14px 40px rgba(0,0,0,.08); }
+    .rcard::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(108,99,255,.07), rgba(0,119,182,.05)); opacity: 0; transition: opacity .3s; }
+    .rcard:hover { transform: translateY(-4px); border-color: rgba(0,119,182,.28); box-shadow: 0 14px 40px rgba(0,0,0,.08); }
     .rcard:hover::before { opacity: 1; }
     .rcard-icon { font-size: 1.9rem; margin-bottom: .9rem; }
     .rcard h3 { font-size: 1.03rem; font-weight: 600; margin-bottom: .6rem; }
@@ -105,13 +105,13 @@
     .pub-search::placeholder { color: var(--muted); }
     .filters { display: flex; gap: .45rem; flex-wrap: wrap; }
     .filt { padding: .4rem 1rem; border-radius: 50px; font-size: .78rem; font-weight: 500; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all .2s; }
-    .filt.active, .filt:hover { background: rgba(26,86,219,.1); border-color: rgba(26,86,219,.5); color: var(--gold2); }
+    .filt.active, .filt:hover { background: rgba(0,119,182,.1); border-color: rgba(0,119,182,.5); color: var(--gold2); }
     .pub-list { display: flex; flex-direction: column; gap: 1.1rem; }
     .pub { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem 1.7rem; transition: all .25s; border-left: 3px solid transparent; }
     .pub:hover { border-left-color: var(--gold); transform: translateX(3px); }
     .pub.hidden { display: none; }
     .pub-meta { display: flex; gap: .7rem; flex-wrap: wrap; align-items: center; margin-bottom: .55rem; }
-    .pub-year { font-size: .73rem; font-weight: 700; letter-spacing: .08em; color: var(--gold); background: rgba(26,86,219,.1); padding: .18rem .6rem; border-radius: 50px; }
+    .pub-year { font-size: .73rem; font-weight: 700; letter-spacing: .08em; color: var(--gold); background: rgba(0,119,182,.1); padding: .18rem .6rem; border-radius: 50px; }
     .pub-jnl { font-size: .8rem; color: var(--accent2); font-style: italic; }
     .pub-tag { font-size: .7rem; padding: .15rem .5rem; border-radius: 50px; background: rgba(108,99,255,.1); color: var(--accent2); border: 1px solid rgba(108,99,255,.18); }
     .pub-title { font-size: .97rem; font-weight: 500; margin-bottom: .4rem; line-height: 1.5; }
@@ -127,7 +127,7 @@
     .conf-meta { display: flex; gap: .7rem; flex-wrap: wrap; align-items: center; margin-bottom: .45rem; }
     .conf-year { font-size: .73rem; font-weight: 700; letter-spacing: .08em; color: var(--accent2); background: rgba(108,99,255,.1); padding: .18rem .6rem; border-radius: 50px; }
     .conf-venue { font-size: .8rem; color: var(--muted); font-style: italic; }
-    .conf-type-tag { font-size: .7rem; padding: .15rem .5rem; border-radius: 50px; background: rgba(26,86,219,.08); color: var(--gold); border: 1px solid rgba(26,86,219,.2); }
+    .conf-type-tag { font-size: .7rem; padding: .15rem .5rem; border-radius: 50px; background: rgba(0,119,182,.08); color: var(--gold); border: 1px solid rgba(0,119,182,.2); }
     .conf-title { font-size: .95rem; font-weight: 500; margin-bottom: .3rem; line-height: 1.5; }
     .conf-authors { font-size: .82rem; color: var(--muted); }
     .conf-authors strong { color: var(--gold2); }
@@ -135,14 +135,14 @@
     #honors { background: var(--bg2); }
     .honors-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.1rem; }
     .honor-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.4rem; transition: all .25s; }
-    .honor-card:hover { transform: translateY(-3px); border-color: rgba(26,86,219,.28); box-shadow: 0 8px 28px rgba(0,0,0,.07); }
+    .honor-card:hover { transform: translateY(-3px); border-color: rgba(0,119,182,.28); box-shadow: 0 8px 28px rgba(0,0,0,.07); }
     .honor-header { display: flex; align-items: flex-start; gap: .75rem; margin-bottom: .4rem; }
     .honor-icon { font-size: 1.3rem; flex-shrink: 0; }
     .honor-name { font-size: .9rem; font-weight: 600; color: var(--text); line-height: 1.4; }
     .honor-org { font-size: .8rem; color: var(--muted); margin-top: .2rem; }
-    .honor-year { font-size: .72rem; font-weight: 700; color: var(--gold); background: rgba(26,86,219,.1); padding: .15rem .55rem; border-radius: 50px; display: inline-block; margin-top: .5rem; }
+    .honor-year { font-size: .72rem; font-weight: 700; color: var(--gold); background: rgba(0,119,182,.1); padding: .15rem .55rem; border-radius: 50px; display: inline-block; margin-top: .5rem; }
     #ai-assistant { background: radial-gradient(ellipse 65% 70% at 50% 50%, rgba(108,99,255,.09), transparent); }
-    .ai-card { background: linear-gradient(135deg, rgba(108,99,255,.09), rgba(26,86,219,.05)); border: 1px solid rgba(108,99,255,.22); border-radius: 24px; padding: 2.2rem; max-width: 780px; margin: 0 auto; }
+    .ai-card { background: linear-gradient(135deg, rgba(108,99,255,.09), rgba(0,119,182,.05)); border: 1px solid rgba(108,99,255,.22); border-radius: 24px; padding: 2.2rem; max-width: 780px; margin: 0 auto; }
     .ai-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.4rem; }
     .ai-avatar { width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--gold)); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; box-shadow: 0 4px 16px rgba(108,99,255,.4); }
     .ai-title { font-size: 1rem; font-weight: 600; }
@@ -153,7 +153,7 @@
     .msg { max-width: 88%; padding: .75rem 1rem; border-radius: 12px; font-size: .88rem; line-height: 1.58; animation: fadeUp .3s ease; }
     @keyframes fadeUp { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
     .msg.bot { background: rgba(108,99,255,.08); border: 1px solid rgba(108,99,255,.18); align-self: flex-start; border-bottom-left-radius: 3px; }
-    .msg.user { background: rgba(26,86,219,.1); border: 1px solid rgba(26,86,219,.2); align-self: flex-end; border-bottom-right-radius: 3px; }
+    .msg.user { background: rgba(0,119,182,.1); border: 1px solid rgba(0,119,182,.2); align-self: flex-end; border-bottom-right-radius: 3px; }
     .ai-row { display: flex; gap: .65rem; }
     .ai-inp { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 50px; padding: .65rem 1.3rem; color: var(--text); font-size: .88rem; outline: none; transition: border-color .2s; }
     .ai-inp:focus { border-color: var(--accent); }
@@ -163,7 +163,7 @@
     .ai-suggs { display: flex; gap: .45rem; flex-wrap: wrap; margin-top: .8rem; }
     .sugg { font-size: .76rem; padding: .32rem .8rem; border-radius: 50px; cursor: pointer; border: 1px solid var(--border); color: var(--muted); background: var(--surface); transition: all .2s; }
     .sugg:hover { border-color: var(--accent); color: var(--accent2); background: rgba(108,99,255,.08); }
-    #media { background: radial-gradient(ellipse 40% 50% at 0% 100%, rgba(26,86,219,.05), transparent); }
+    #media { background: radial-gradient(ellipse 40% 50% at 0% 100%, rgba(0,119,182,.05), transparent); }
     .press-controls { display: flex; gap: .9rem; flex-wrap: wrap; align-items: center; margin-bottom: 1.2rem; }
     .press-search { flex: 1; min-width: 200px; background: var(--surface); border: 1px solid var(--border); border-radius: 50px; padding: .65rem 1.3rem; color: var(--text); font-size: .88rem; outline: none; transition: border-color .2s; }
     .press-search:focus { border-color: var(--gold); }
@@ -171,10 +171,10 @@
     .press-select { background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: .65rem 1rem; border-radius: 12px; font-size: .85rem; outline: none; cursor: pointer; }
     .year-chips { display: flex; gap: .45rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
     .ychip { padding: .32rem .8rem; border-radius: 50px; font-size: .76rem; font-weight: 500; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; transition: all .2s; }
-    .ychip.active { background: rgba(26,86,219,.1); border-color: rgba(26,86,219,.5); color: var(--gold2); }
+    .ychip.active { background: rgba(0,119,182,.1); border-color: rgba(0,119,182,.5); color: var(--gold2); }
     .press-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.2rem; }
     .pcard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: all .28s; }
-    .pcard:hover { transform: translateY(-4px); border-color: rgba(26,86,219,.28); box-shadow: 0 12px 36px rgba(0,0,0,.08); }
+    .pcard:hover { transform: translateY(-4px); border-color: rgba(0,119,182,.28); box-shadow: 0 12px 36px rgba(0,0,0,.08); }
     .pcard-img { aspect-ratio: 16/9; overflow: hidden; background: #dbeafe; }
     .pcard-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
     .pcard:hover .pcard-img img { transform: scale(1.04); }
@@ -200,7 +200,7 @@
     .contact-wrap p { color: var(--muted); margin-bottom: 2rem; font-size: .98rem; }
     .clinks { display: flex; gap: .9rem; justify-content: center; flex-wrap: wrap; }
     .clink { display: flex; align-items: center; gap: .5rem; padding: .7rem 1.4rem; border-radius: 50px; border: 1px solid var(--border); color: var(--text); font-size: .88rem; transition: all .25s; background: var(--surface); }
-    .clink:hover { border-color: var(--gold); color: var(--gold2); transform: translateY(-2px); background: rgba(26,86,219,.06); }
+    .clink:hover { border-color: var(--gold); color: var(--gold2); transform: translateY(-2px); background: rgba(0,119,182,.06); }
     footer { text-align: center; padding: 1.8rem 5vw; border-top: 1px solid var(--border); color: var(--muted); font-size: .8rem; position: relative; z-index: 1; }
     footer strong { color: var(--gold); }
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
@@ -328,56 +328,56 @@
     <div class="pub-list" id="pubList">
 
       <div class="pub reveal" data-tags="ai prosocial">
-        <div class="pub-meta"><span class="pub-year">2025</span><span class="pub-jnl">Journal of Service Research</span><span class="pub-tag">AI</span><span class="pub-tag">Prosocial</span><span class="pub-tag" style="background:rgba(26,86,219,.08);color:var(--gold);border-color:rgba(26,86,219,.2)">ABDC A*</span></div>
+        <div class="pub-meta"><span class="pub-year">2025</span><span class="pub-jnl">Journal of Service Research</span><span class="pub-tag">AI</span><span class="pub-tag">Prosocial</span><span class="pub-tag" style="background:rgba(0,119,182,.08);color:var(--gold);border-color:rgba(0,119,182,.2)">ABDC A*</span></div>
         <div class="pub-title">Empathetic AI Encounters: Pathways to Prosocial Behavior</div>
         <div class="pub-authors">Haijiao Shi, <strong>Bingqing Miranda Yin</strong>, Lefa Teng, Baolong Ma</div>
         <div class="pub-links"><a class="plink" href="https://scholar.google.com/citations?user=0zBOAPwAAAAJ" target="_blank" rel="noopener">View on Google Scholar →</a></div>
       </div>
 
       <div class="pub reveal" data-tags="ethics">
-        <div class="pub-meta"><span class="pub-year">2025</span><span class="pub-jnl">Journal of Business Ethics</span><span class="pub-tag">Ethics</span><span class="pub-tag">Well-being</span><span class="pub-tag" style="background:rgba(26,86,219,.08);color:var(--gold);border-color:rgba(26,86,219,.2)">FT50 · ABDC A*</span></div>
+        <div class="pub-meta"><span class="pub-year">2025</span><span class="pub-jnl">Journal of Business Ethics</span><span class="pub-tag">Ethics</span><span class="pub-tag">Well-being</span><span class="pub-tag" style="background:rgba(0,119,182,.08);color:var(--gold);border-color:rgba(0,119,182,.2)">FT50 · ABDC A*</span></div>
         <div class="pub-title">Rage Against the Dying of The Light: Employees' Moral Outrage, Anger Expression, and Generalized Well-Being</div>
         <div class="pub-authors">Robert Giacalone, Sean Valentine, <strong>Bingqing Miranda Yin</strong>, Mark Promislo</div>
         <div class="pub-links"><a class="plink" href="https://scholar.google.com/citations?user=0zBOAPwAAAAJ" target="_blank" rel="noopener">View on Google Scholar →</a></div>
       </div>
 
       <div class="pub reveal" data-tags="ethics">
-        <div class="pub-meta"><span class="pub-year">2025</span><span class="pub-jnl">Stress and Health</span><span class="pub-tag">Ethics</span><span class="pub-tag">Stress</span><span class="pub-tag" style="background:rgba(26,86,219,.08);color:var(--gold);border-color:rgba(26,86,219,.2)">ABDC A</span></div>
+        <div class="pub-meta"><span class="pub-year">2025</span><span class="pub-jnl">Stress and Health</span><span class="pub-tag">Ethics</span><span class="pub-tag">Stress</span><span class="pub-tag" style="background:rgba(0,119,182,.08);color:var(--gold);border-color:rgba(0,119,182,.2)">ABDC A</span></div>
         <div class="pub-title">Unethical Poly-Victimization and its Impact on Work Stress and Individual Well-Being</div>
         <div class="pub-authors">Sean Valentine, Robert Giacalone, <strong>Bingqing Miranda Yin</strong>, Mark Promislo</div>
         <div class="pub-links"><a class="plink" href="https://scholar.google.com/citations?user=0zBOAPwAAAAJ" target="_blank" rel="noopener">View on Google Scholar →</a></div>
       </div>
 
       <div class="pub reveal" data-tags="gifts">
-        <div class="pub-meta"><span class="pub-year">2024</span><span class="pub-jnl">Journal of Retailing</span><span class="pub-tag">Gift-Giving</span><span class="pub-tag">Sustainability</span><span class="pub-tag" style="background:rgba(26,86,219,.08);color:var(--gold);border-color:rgba(26,86,219,.2)">ABDC A*</span></div>
+        <div class="pub-meta"><span class="pub-year">2024</span><span class="pub-jnl">Journal of Retailing</span><span class="pub-tag">Gift-Giving</span><span class="pub-tag">Sustainability</span><span class="pub-tag" style="background:rgba(0,119,182,.08);color:var(--gold);border-color:rgba(0,119,182,.2)">ABDC A*</span></div>
         <div class="pub-title">Thoughtful or Thoughtless? Asymmetric Attitudes of Gift-Givers and Gift-Recipients toward Overpackaged Gifts</div>
         <div class="pub-authors">Haijiao Shi, Rong Chen, <strong>Bingqing Miranda Yin</strong> <em style="font-size:.78rem;color:var(--muted)">(equal second authorship)</em></div>
         <div class="pub-links"><a class="plink" href="https://scholar.google.com/citations?user=0zBOAPwAAAAJ" target="_blank" rel="noopener">View on Google Scholar →</a></div>
       </div>
 
       <div class="pub reveal" data-tags="charity prosocial">
-        <div class="pub-meta"><span class="pub-year">2023</span><span class="pub-jnl">Journal of Advertising</span><span class="pub-tag">Charity</span><span class="pub-tag">In-Group Bias</span><span class="pub-tag" style="background:rgba(26,86,219,.08);color:var(--gold);border-color:rgba(26,86,219,.2)">ABDC A</span></div>
+        <div class="pub-meta"><span class="pub-year">2023</span><span class="pub-jnl">Journal of Advertising</span><span class="pub-tag">Charity</span><span class="pub-tag">In-Group Bias</span><span class="pub-tag" style="background:rgba(0,119,182,.08);color:var(--gold);border-color:rgba(0,119,182,.2)">ABDC A</span></div>
         <div class="pub-title">Benefactor- versus Recipient-Focused Charitable Appeals: How to Leverage In-Group Bias to Promote Donations for Out-Group Recipients</div>
         <div class="pub-authors"><strong>Bingqing Miranda Yin</strong>, Yexin Li</div>
         <div class="pub-links"><a class="plink" href="https://scholar.google.com/citations?user=0zBOAPwAAAAJ" target="_blank" rel="noopener">View on Google Scholar →</a></div>
       </div>
 
       <div class="pub reveal" data-tags="charity prosocial">
-        <div class="pub-meta"><span class="pub-year">2020</span><span class="pub-jnl">Journal of Marketing</span><span class="pub-tag">Charity</span><span class="pub-tag">Incentives</span><span class="pub-tag">Relationship Norms</span><span class="pub-tag" style="background:rgba(26,86,219,.08);color:var(--gold);border-color:rgba(26,86,219,.2)">FT50 · ABDC A*</span></div>
+        <div class="pub-meta"><span class="pub-year">2020</span><span class="pub-jnl">Journal of Marketing</span><span class="pub-tag">Charity</span><span class="pub-tag">Incentives</span><span class="pub-tag">Relationship Norms</span><span class="pub-tag" style="background:rgba(0,119,182,.08);color:var(--gold);border-color:rgba(0,119,182,.2)">FT50 · ABDC A*</span></div>
         <div class="pub-title">Coins Are Cold and Cards Are Caring: The Effect of Pre-giving Incentives on Perceptions of Charitable Organizations and Donation Behavior</div>
         <div class="pub-authors"><strong>Bingqing Miranda Yin</strong>, Yexin Jessica Li, Surendra Singh</div>
         <div class="pub-links"><a class="plink" href="https://scholar.google.com/citations?user=0zBOAPwAAAAJ" target="_blank" rel="noopener">View on Google Scholar →</a></div>
       </div>
 
       <div class="pub reveal" data-tags="charity prosocial">
-        <div class="pub-meta"><span class="pub-year">2020</span><span class="pub-jnl">International Journal of Research in Marketing</span><span class="pub-tag">Charity</span><span class="pub-tag">Color Psychology</span><span class="pub-tag" style="background:rgba(26,86,219,.08);color:var(--gold);border-color:rgba(26,86,219,.2)">ABDC A*</span></div>
+        <div class="pub-meta"><span class="pub-year">2020</span><span class="pub-jnl">International Journal of Research in Marketing</span><span class="pub-tag">Charity</span><span class="pub-tag">Color Psychology</span><span class="pub-tag" style="background:rgba(0,119,182,.08);color:var(--gold);border-color:rgba(0,119,182,.2)">ABDC A*</span></div>
         <div class="pub-title">Opposites Attract: Impact of Background Color on Effectiveness of Emotional Charity Appeals</div>
         <div class="pub-authors">Jungsil Choi, Yexin J. Li, Priyamvadha Rangan, <strong>Bingqing Miranda Yin</strong>, Surendra N. Singh</div>
         <div class="pub-links"><a class="plink" href="https://scholar.google.com/citations?user=0zBOAPwAAAAJ" target="_blank" rel="noopener">View on Google Scholar →</a></div>
       </div>
 
       <div class="pub reveal" data-tags="branding">
-        <div class="pub-meta"><span class="pub-year">2017</span><span class="pub-jnl">Journal of Product and Brand Management</span><span class="pub-tag">Branding</span><span class="pub-tag" style="background:rgba(26,86,219,.08);color:var(--gold);border-color:rgba(26,86,219,.2)">ABDC A</span></div>
+        <div class="pub-meta"><span class="pub-year">2017</span><span class="pub-jnl">Journal of Product and Brand Management</span><span class="pub-tag">Branding</span><span class="pub-tag" style="background:rgba(0,119,182,.08);color:var(--gold);border-color:rgba(0,119,182,.2)">ABDC A</span></div>
         <div class="pub-title">Impact of Diversity, Quality and Number of Brand Alliance Partners on the Perceived Quality of a New Brand</div>
         <div class="pub-authors">Sanjay Mishra, Surendra Singh, Fang Xiang, <strong>Bingqing Miranda Yin</strong></div>
         <div class="pub-links"><a class="plink" href="https://scholar.google.com/citations?user=0zBOAPwAAAAJ" target="_blank" rel="noopener">View on Google Scholar →</a></div>
@@ -547,7 +547,7 @@
   for(let i=0;i<65;i++) pts.push({x:Math.random()*1920,y:Math.random()*1080,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*1.4+.5,a:Math.random()});
   function draw(){
     ctx.clearRect(0,0,W,H);
-    pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(26,86,219,${p.a*.28})`;ctx.fill();});
+    pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(0,119,182,${p.a*.28})`;ctx.fill();});
     for(let i=0;i<pts.length;i++) for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<115){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(108,99,255,${(1-d/115)*.11})`;ctx.lineWidth=.5;ctx.stroke();}}
     requestAnimationFrame(draw);
   }
